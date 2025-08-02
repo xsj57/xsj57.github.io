@@ -1,36 +1,43 @@
 /* --- 第一步：定义完整的 "EB Garamond" 字体家族 --- */
 /* 我们将为同一个字体家族 'EB Garamond' 定义不同的字重和样式 */
 
-/* 1. 定义常规体 (Regular) - 字重 400 */
+/* 1. 定义常规体 (Regular) - 字重 400 (备用) */
 @font-face {
     font-family: 'EB Garamond';
     src: url('fonts/EBGaramond-Regular.woff2') format('woff2');
     font-weight: 400;
-    /* 使用数字字重，更精确 */
     font-style: normal;
 }
 
-/* 2. 定义斜体 (Italic) - 字重 400 */
+/* 2. 定义中等体 (Medium) - 字重 500 */
 @font-face {
     font-family: 'EB Garamond';
-    src: url('fonts/EBGaramond-Italic.woff2') format('woff2');
-    font-weight: 400;
+    src: url('fonts/EBGaramond-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* 3. 定义中等斜体 (Medium Italic) - 字重 500 */
+@font-face {
+    font-family: 'EB Garamond';
+    src: url('fonts/EBGaramond-MediumItalic.woff2') format('woff2');
+    font-weight: 500;
     font-style: italic;
 }
 
-/* 3. 定义半粗体 (SemiBold) - 字重 600 */
+/* 4. 定义粗体 (Bold) - 字重 700 */
 @font-face {
     font-family: 'EB Garamond';
-    src: url('fonts/EBGaramond-SemiBold.woff2') format('woff2');
-    font-weight: 600;
+    src: url('fonts/EBGaramond-Bold.woff2') format('woff2');
+    font-weight: 700;
     font-style: normal;
 }
 
-/* 4. 定义半粗斜体 (SemiBold Italic) - 字重 600 */
+/* 5. 定义粗斜体 (Bold Italic) - 字重 700 */
 @font-face {
     font-family: 'EB Garamond';
-    src: url('fonts/EBGaramond-SemiBoldItalic.woff2') format('woff2');
-    font-weight: 600;
+    src: url('fonts/EBGaramond-BoldItalic.woff2') format('woff2');
+    font-weight: 700;
     font-style: italic;
 }
 
@@ -40,10 +47,10 @@
 body {
     margin: 20px auto;
     padding: 0;
-    /* 默认使用常规体 (font-weight: 400) */
+    /* 核心改动：使用 Medium (500)作为正文默认字重 */
     font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+    font-weight: 500;
     font-size: 17px;
-    /* Garamond 字体稍小，稍微调大一点更易读 */
     line-height: 1.6;
     color: #333;
 }
@@ -52,13 +59,13 @@ p {
     text-align: justify;
 }
 
-/* 标题使用半粗体 (font-weight: 600) */
+/* 核心改动：标题使用更有分量的 Bold (700) */
 h2,
 .papertitle,
 .name {
     font-family: 'EB Garamond', 'Georgia', 'Times New Roman', Times, serif;
-    font-weight: 600;
-    /* 浏览器会自动选择我们定义的 SemiBold 文件 */
+    font-weight: 700;
+    /* 浏览器会自动选择我们定义的 Bold 文件 */
 }
 
 h2 {
@@ -78,17 +85,17 @@ h2 {
     font-size: 34px;
 }
 
-/* 斜体文字 (font-style: italic) */
+/* 斜体文字 (继承 body 的 500 字重，并应用斜体) */
 .italic-text {
     font-style: italic;
-    /* 浏览器会自动选择 Italic 文件 */
+    /* 浏览器会自动选择 MediumItalic 文件 */
 }
 
-/* 粗斜体关键字 (font-weight: 600, font-style: italic) */
+/* 粗斜体关键字 (应用 700 字重和斜体) */
 .bold-italic-text {
-    font-weight: 600;
+    font-weight: 700;
     font-style: italic;
-    /* 浏览器会自动选择 SemiBoldItalic 文件 */
+    /* 浏览器会自动选择 BoldItalic 文件 */
 }
 
 a {
@@ -116,6 +123,7 @@ body {
     left: 0;
     width: 15px;
     height: 15px;
+    /* 核心改动：更新为您选择的颜色 */
     border: 5px solid #5fb7da;
     border-radius: 50%;
     pointer-events: none;
