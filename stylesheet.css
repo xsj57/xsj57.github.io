@@ -135,23 +135,33 @@ body {
 
 /* 图标容器的样式 */
 .social-icons {
-    margin-top: 15px;
+    margin-top: 20px;
+    /* 与上方的头像拉开一些距离 */
     display: flex;
     justify-content: center;
-    /* 水平居中 */
+    /* 水平居中整个图标行 */
     align-items: center;
-    /* 垂直居中 */
-    gap: 12px;
-    /* 元素间距 */
+    /* 垂直对齐所有元素 */
 }
 
-/* 核心改动：直接为容器内的 img 标签设置样式 */
+/* 核心改动：为每个链接(a)设置固定尺寸，使其成为一个对称的“格子” */
+.social-icons a {
+    width: 40px;
+    /* 每个格子的宽度 */
+    height: 40px;
+    /* 每个格子的高度 */
+    display: flex;
+    /* 使用Flex来让格子内部的图标也居中 */
+    justify-content: center;
+    align-items: center;
+}
+
+/* 图标图片本身的样式 */
 .social-icons img {
     height: 24px;
     /* 统一所有图标的高度 */
     width: auto;
     /* 宽度自动调整以保持比例 */
-    /* 添加简单的悬停效果 */
     transition: opacity 0.2s ease;
 }
 
@@ -164,7 +174,8 @@ body {
 .separator {
     color: #ccc;
     font-size: 24px;
-    /* 让分隔符和图标差不多高 */
     font-weight: 100;
     /* 让分隔符细一些 */
+    margin: 0 5px;
+    /* 为分隔符添加一点左右边距，取代gap */
 }
