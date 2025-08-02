@@ -1,7 +1,4 @@
-/* --- 第一步：定义完整的 "EB Garamond" 字体家族 --- */
-/* 我们将为同一个字体家族 'EB Garamond' 定义不同的字重和样式 */
-
-/* 1. 定义常规体 (Regular) - 字重 400 (备用) */
+/* --- 定义完整的 "EB Garamond" 字体家族 --- */
 @font-face {
     font-family: 'EB Garamond';
     src: url('fonts/EBGaramond-Regular.woff2') format('woff2');
@@ -9,7 +6,6 @@
     font-style: normal;
 }
 
-/* 2. 定义中等体 (Medium) - 字重 500 */
 @font-face {
     font-family: 'EB Garamond';
     src: url('fonts/EBGaramond-Medium.woff2') format('woff2');
@@ -17,7 +13,6 @@
     font-style: normal;
 }
 
-/* 3. 定义中等斜体 (Medium Italic) - 字重 500 */
 @font-face {
     font-family: 'EB Garamond';
     src: url('fonts/EBGaramond-MediumItalic.woff2') format('woff2');
@@ -25,7 +20,6 @@
     font-style: italic;
 }
 
-/* 4. 定义粗体 (Bold) - 字重 700 */
 @font-face {
     font-family: 'EB Garamond';
     src: url('fonts/EBGaramond-Bold.woff2') format('woff2');
@@ -33,7 +27,6 @@
     font-style: normal;
 }
 
-/* 5. 定义粗斜体 (Bold Italic) - 字重 700 */
 @font-face {
     font-family: 'EB Garamond';
     src: url('fonts/EBGaramond-BoldItalic.woff2') format('woff2');
@@ -41,13 +34,10 @@
     font-style: italic;
 }
 
-
-/* --- 第二步：在下面的样式中应用新的字体方案 --- */
-
+/* --- 应用字体方案 --- */
 body {
     margin: 20px auto;
     padding: 0;
-    /* 核心改动：使用 Medium (500)作为正文默认字重 */
     font-family: 'EB Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 17px;
@@ -59,13 +49,11 @@ p {
     text-align: justify;
 }
 
-/* 核心改动：标题使用更有分量的 Bold (700) */
 h2,
 .papertitle,
 .name {
     font-family: 'EB Garamond', 'Georgia', 'Times New Roman', Times, serif;
     font-weight: 700;
-    /* 浏览器会自动选择我们定义的 Bold 文件 */
 }
 
 h2 {
@@ -85,17 +73,13 @@ h2 {
     font-size: 34px;
 }
 
-/* 斜体文字 (继承 body 的 500 字重，并应用斜体) */
 .italic-text {
     font-style: italic;
-    /* 浏览器会自动选择 MediumItalic 文件 */
 }
 
-/* 粗斜体关键字 (应用 700 字重和斜体) */
 .bold-italic-text {
     font-weight: 700;
     font-style: italic;
-    /* 浏览器会自动选择 BoldItalic 文件 */
 }
 
 a {
@@ -123,7 +107,6 @@ body {
     left: 0;
     width: 15px;
     height: 15px;
-    /* 核心改动：更新为您选择的颜色 */
     border: 5px solid #5fb7da;
     border-radius: 50%;
     pointer-events: none;
@@ -131,44 +114,38 @@ body {
     z-index: 9999;
 }
 
-/* --- 社交媒体图标样式 --- */
-
-/* 核心改动：为包裹头像和图标的新容器设置样式 */
+/* --- 社交媒体图标样式 (最终完美对称方案) --- */
 .avatar-container {
     display: flex;
-    /* 启用 Flex 布局 */
     flex-direction: column;
-    /* 让内部元素垂直排列 (照片在上，图标在下) */
     align-items: center;
-    /* 关键！让所有内部元素都水平居中对齐 */
 }
 
-/* 图标容器本身的样式 */
 .social-icons {
     margin-top: 15px;
-    /* 与上方的头像拉开一些距离 */
     display: flex;
     align-items: center;
-    /* 垂直对齐图标和分隔符 */
     gap: 12px;
 }
 
-/* 图标图片本身的样式 */
 .social-icons img {
     height: 24px;
     width: auto;
     transition: opacity 0.2s ease;
 }
 
-/* 鼠标悬停在链接上时，图标变淡 */
 .social-icons a:hover img {
     opacity: 0.7;
 }
 
-/* 分隔符的样式 */
+/* 分隔符的样式 (最终对齐修正版) */
 .separator {
     color: #ccc;
     font-size: 24px;
     font-weight: 100;
-}
+
+    /* 核心改动：使用相对定位将分割线向上微调 */
+    position: relative;
+    top: -2px;
+    /* 向上移动2个像素，实现视觉上的垂直居中 */
 }
