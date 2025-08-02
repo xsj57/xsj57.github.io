@@ -136,35 +136,35 @@ body {
 /* 图标容器的样式 */
 .social-icons {
     margin-top: 15px;
-    /* 与上方的头像拉开一些距离 */
-
-    /* 核心改动：使用 Flexbox 进行布局 */
     display: flex;
-    /* 启用 Flex 布局 */
     justify-content: center;
-    /* 水平居中所有图标 */
+    /* 水平居中 */
     align-items: center;
-    /* 垂直居中所有图标，解决偏移问题 */
-    gap: 10px;
-    /* 设置图标和分隔符之间的间距 */
+    /* 垂直居中 */
+    gap: 12px;
+    /* 元素间距 */
 }
 
-/* SVG 图标本身的样式 */
-.social-icons svg {
-    width: 24px;
+/* 核心改动：直接为容器内的 img 标签设置样式 */
+.social-icons img {
     height: 24px;
-    fill: #888;
-    transition: fill 0.3s ease;
+    /* 统一所有图标的高度 */
+    width: auto;
+    /* 宽度自动调整以保持比例 */
+    /* 添加简单的悬停效果 */
+    transition: opacity 0.2s ease;
 }
 
-/* 鼠标悬停在链接上时，SVG图标的样式 */
-.social-icons a:hover svg {
-    fill: #0077b5;
+/* 鼠标悬停在链接上时，图标变淡 */
+.social-icons a:hover img {
+    opacity: 0.7;
 }
 
 /* 分隔符的样式 */
 .separator {
     color: #ccc;
-    /* 分隔符颜色设为浅灰色 */
-    /* vertical-align 和 margin 在 Flexbox 中不再需要 */
+    font-size: 24px;
+    /* 让分隔符和图标差不多高 */
+    font-weight: 100;
+    /* 让分隔符细一些 */
 }
