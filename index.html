@@ -4,61 +4,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 页面标题，会显示在浏览器标签页上 -->
-    <title>徐世杰 Eric</title>
-    <!-- 链接到我们的样式文件 -->
+    <title>你的名字</title>
+    <!-- 链接到我们的新样式文件 -->
     <link rel="stylesheet" href="style.css">
+    <!-- 引入一个在线字体，让效果更好看 (可选) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <div class="container">
-        <header>
-            <!-- 把这里的头像链接换成你自己的 -->
-            <img src="media/avatar.jpg" alt="头像"
-                class="avatar">
+    <!-- 所有内容的容器，这是屏幕中央的那个“卡片” -->
+    <div class="content-card">
 
-            <!-- 修改成你的名字 -->
-            <h1>徐世杰</h1>
+        <!-- 头像，我们先把它放在卡片内部 -->
+        <img src="media/avatar.jpg" alt="头像" class="avatar">
 
-            <!-- 一句关于你的简介 -->
-            <p class="bio">你好，世界！我是一名开发者 / 设计师 / 学生...</p>
-        </header>
+        <!-- 你的名字 -->
+        <h1 class="name">徐世杰</h1>
 
-        <!-- 这是修改后的 <main> 部分 -->
-        <main>
-            <!-- 双栏布局的容器 -->
-            <div class="two-column-container">
-        
-                <!-- 左边栏：关于我 -->
-                <div class="column">
-                    <h2>关于我</h2>
-                    <p>这里可以写一段详细的自我介绍。说明你的兴趣、技能、项目经验等等。保持简洁，突出重点。</p>
-                </div>
-        
-                <!-- 右边栏：链接 -->
-                <div class="column">
-                    <h2>链接</h2>
-                    <ul>
-                        <li><a href="https://github.com/你的用户名" target="_blank">GitHub</a></li>
-                        <li><a href="mailto:你的邮箱@example.com">邮箱</a></li>
-                    </ul>
-                </div>
-        
-            </div> <!-- 双栏容器结束 -->
-        
-            <!-- 后半部分的单栏内容 -->
-            <div class="single-column-section">
-                <h2>我的项目</h2>
-                <p>这里可以开始写你的单栏内容。例如，你可以详细介绍一个你引以为傲的项目，或者写一篇简短的博客文章等等。这部分会占据全部的宽度。</p>
-            </div>
-        
-        </main>
+        <!-- 个人简介 -->
+        <p class="bio">
+            你好，世界！这里是你的个人简介。
+            你可以介绍你的身份，比如：XX大学博士生 / 前端开发者 / 数字艺术家。专注于 XX 和 XX 领域。
+        </p>
 
+        <!-- 链接容器 -->
+        <div class="links">
+            <a href="你的简历链接" target="_blank">简历(CV)</a>
+            <a href="https://github.com/你的用户名" target="_blank">GitHub</a>
+            <a href="你的谷歌学术链接" target="_blank">谷歌学术</a>
+            <a href="mailto:你的邮箱@example.com">邮箱</a>
+        </div>
 
-        <footer>
-            <p>&copy; 2025 Eric。保留所有权利。</p>
-        </footer>
     </div>
 
 </body>

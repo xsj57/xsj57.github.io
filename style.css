@@ -1,125 +1,88 @@
-/* 全局样式和字体设置 */
-body {
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, "Arial", sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
-    /* 浅灰色背景 */
-    color: #333;
-    /* 深灰色文字 */
+/* 全局重置和基础设置 */
+body,
+html {
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    /* 使用引入的字体 */
 }
 
-/* 主要内容容器 */
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    /* 页面居中 */
-    background-color: #fff;
-    /* 白色内容背景 */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    /* 添加一点阴影，增加立体感 */
+/* 页面背景和布局 */
+body {
+    /* 创建一个深色的径向渐变背景，模仿原网站的氛围 */
+    background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+    color: #fff;
+    /* 全局文字颜色设为白色 */
+
+    /* 使用 Flexbox 将内容在页面上垂直和水平完全居中 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-/* 头部样式 */
-header {
+/* 中央内容卡片 */
+.content-card {
+    max-width: 600px;
     text-align: center;
-    margin-bottom: 40px;
+    padding: 40px;
+
+    /* 关键：创建毛玻璃效果 */
+    background-color: rgba(255, 255, 255, 0.1);
+    /* 半透明白色背景 */
+    backdrop-filter: blur(10px);
+    /* 背景模糊滤镜 */
+    -webkit-backdrop-filter: blur(10px);
+    /* 兼容 Safari 浏览器 */
+
+    border-radius: 16px;
+    /* 更圆润的边角 */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    /* 浅色半透明边框 */
 }
 
 /* 头像样式 */
 .avatar {
-    width: 150px;
-    height: 200px;
+    width: 100px;
+    height: 100px;
     border-radius: 0%;
-    /* 圆形头像 */
-    border: 3px solid #ddd;
-    margin-bottom: 15px;
+    /* 目标网站是圆形头像，如果你坚持不要，可以设为 0 或删除此行 */
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
 }
 
-/* 主标题 H1 */
-h1 {
+/* 名字样式 */
+.name {
     font-size: 2.5em;
-    margin: 0;
+    /* 调大字号 */
+    margin: 0 0 10px 0;
+    font-weight: 700;
+    /* 粗体 */
 }
 
-/* 个人简介 */
+/* 简介样式 */
 .bio {
-    font-size: 1.2em;
-    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    /* 使用略微透明的白色，增加层次感 */
+    margin-bottom: 30px;
 }
 
-/* 小标题 H2 */
-h2 {
-    border-bottom: 2px solid #eee;
-    padding-bottom: 10px;
-    margin-top: 40px;
-}
-
-/* 链接列表样式 */
-ul {
-    list-style: none;
-    /* 去掉列表前的小圆点 */
-    padding: 0;
-}
-
-ul li {
-    margin-bottom: 10px;
-}
-
-ul li a {
+/* 链接容器 */
+.links a {
+    color: #fff;
     text-decoration: none;
-    /* 去掉链接下划线 */
-    color: #0366d6;
-    /* 蓝色链接，类似GitHub的颜色 */
-    font-weight: bold;
+    margin: 0 15px;
+    /* 设置链接之间的左右间距 */
+    font-size: 1em;
+    transition: color 0.3s ease;
+    /* 添加平滑的颜色过渡效果 */
 }
 
-ul li a:hover {
-    text-decoration: underline;
-    /* 鼠标悬停时显示下划线 */
-}
-
-/* 页脚样式 */
-footer {
-    text-align: center;
-    margin-top: 50px;
-    color: #888;
-    font-size: 0.9em;
-}
-/* --- 新增的布局样式 --- */
-
-/* 双栏容器：设置为 Flex 布局 */
-.two-column-container {
-    display: flex;
-    /* 启用 Flexbox 布局 */
-    gap: 40px;
-    /* 设置两栏之间的间距 */
-    margin-bottom: 40px;
-    /* 和下方的单栏内容拉开距离 */
-}
-
-/* 栏目通用样式 */
-.column {
-    flex: 1;
-    /* 让每个栏目都占据相等的空间 (1代表一份) */
-}
-
-/* 单栏部分 (目前不需要特殊样式，但预留) */
-.single-column-section {
-    /* 你可以在这里为单栏部分添加特定样式 */
-}
-
-
-/* 响应式设计：让页面在小屏幕上自动变回单栏 */
-/* 当浏览器宽度小于等于 768px 时 (典型的平板和手机) */
-@media (max-width: 768px) {
-    .two-column-container {
-        flex-direction: column;
-        /* 将主轴方向改为垂直，实现堆叠效果 */
-        gap: 0;
-        /* 堆叠后，列间距设为0 */
-    }
+/* 鼠标悬停在链接上时的效果 */
+.links a:hover {
+    color: #17a2b8;
+    /* 悬停时变为青色，你可以换成任何喜欢的颜色 */
 }
