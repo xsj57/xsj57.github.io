@@ -1,48 +1,50 @@
-/* --- 定义完整的 "Bookman Old Style" 字体家族 --- */
+/* --- 第一步：定义完整的 "EB Garamond" 字体家族 --- */
+/* 我们将为同一个字体家族 'EB Garamond' 定义不同的字重和样式 */
 
-/* 1. 定义常规体 (Regular) */
+/* 1. 定义常规体 (Regular) - 字重 400 */
 @font-face {
-    font-family: 'Bookman Old Style';
-    /* 确保这个文件名与你上传的文件名大小写完全一致 */
-    src: url('fonts/bookmanoldstyle.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'EB Garamond';
+    src: url('fonts/EBGaramond-Regular.woff2') format('woff2');
+    font-weight: 400;
+    /* 使用数字字重，更精确 */
     font-style: normal;
 }
 
-/* 2. 定义斜体 (Italic) */
+/* 2. 定义斜体 (Italic) - 字重 400 */
 @font-face {
-    font-family: 'Bookman Old Style';
-    src: url('fonts/bookmanoldstyle_italic.woff2') format('woff2');
-    font-weight: normal;
+    font-family: 'EB Garamond';
+    src: url('fonts/EBGaramond-Italic.woff2') format('woff2');
+    font-weight: 400;
     font-style: italic;
 }
 
-/* 3. 定义粗体 (Bold) */
+/* 3. 定义半粗体 (SemiBold) - 字重 600 */
 @font-face {
-    font-family: 'Bookman Old Style';
-    src: url('fonts/bookmanoldstyle_bold.woff2') format('woff2');
-    font-weight: bold;
+    font-family: 'EB Garamond';
+    src: url('fonts/EBGaramond-SemiBold.woff2') format('woff2');
+    font-weight: 600;
     font-style: normal;
 }
 
-/* 4. 定义粗斜体 (Bold Italic) */
+/* 4. 定义半粗斜体 (SemiBold Italic) - 字重 600 */
 @font-face {
-    font-family: 'Bookman Old Style';
-    src: url('fonts/bookmanoldstyle_bolditalic.woff2') format('woff2');
-    font-weight: bold;
+    font-family: 'EB Garamond';
+    src: url('fonts/EBGaramond-SemiBoldItalic.woff2') format('woff2');
+    font-weight: 600;
     font-style: italic;
 }
 
 
-/* --- 应用你的新字体 --- */
+/* --- 第二步：在下面的样式中应用新的字体方案 --- */
 
 body {
     margin: 20px auto;
     padding: 0;
-    /* 应用新字体，这里是关键 */
-    font-family: 'Bookman Old Style', Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    line-height: 1.5;
+    /* 默认使用常规体 (font-weight: 400) */
+    font-family: 'EB Garamond', 'Times New Roman', Times, serif;
+    font-size: 17px;
+    /* Garamond 字体稍小，稍微调大一点更易读 */
+    line-height: 1.6;
     color: #333;
 }
 
@@ -50,16 +52,17 @@ p {
     text-align: justify;
 }
 
-/* 标题使用粗体 */
+/* 标题使用半粗体 (font-weight: 600) */
 h2,
 .papertitle,
 .name {
-    font-family: 'Bookman Old Style', 'Georgia', 'Times New Roman', Times, serif;
-    font-weight: bold;
+    font-family: 'EB Garamond', 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: 600;
+    /* 浏览器会自动选择我们定义的 SemiBold 文件 */
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 26px;
     color: #111;
     border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
@@ -68,20 +71,24 @@ h2 {
 
 .papertitle {
     color: #555;
-    font-size: 18px;
+    font-size: 19px;
 }
 
 .name {
-    font-size: 32px;
+    font-size: 34px;
 }
 
+/* 斜体文字 (font-style: italic) */
 .italic-text {
     font-style: italic;
+    /* 浏览器会自动选择 Italic 文件 */
 }
 
+/* 粗斜体关键字 (font-weight: 600, font-style: italic) */
 .bold-italic-text {
-    font-weight: bold;
+    font-weight: 600;
     font-style: italic;
+    /* 浏览器会自动选择 SemiBoldItalic 文件 */
 }
 
 a {
@@ -107,10 +114,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    /* 按照你的要求修改为 15px */
     width: 15px;
     height: 15px;
-    border: 5px solid #87CEEB;
+    border: 5px solid #5fb7da;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
