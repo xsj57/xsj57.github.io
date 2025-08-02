@@ -60,20 +60,19 @@ body {
     top: 0;
     left: 0;
     width: 20px;
+    /* 圆环的内部直径 */
     height: 20px;
-    background-color: #61bfe4;
+    /* 圆环的内部直径 */
+
+    /* 添加5px厚度的天蓝色边框来创建圆环 */
+    border: 5px solid #5abce2;
+
     border-radius: 50%;
-    /* 让它变成圆形 */
-
-    /* 关键: 允许点击事件穿透这个光标元素 */
     pointer-events: none;
-
-    /* 将圆心对准指针, 而不是左上角 */
     transform: translate(-50%, -50%);
 
-    /* 平滑的移动过渡效果 */
-    transition: 0.1s;
+    /* 为了让尺寸变化也更平滑，可以把 transition 应用于 all */
+    transition: all 0.1s ease-out;
 
-    /* 确保光标在所有元素之上 */
     z-index: 9999;
 }
