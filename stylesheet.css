@@ -59,9 +59,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20px;
+    width: 15px;
     /* 圆环的内部直径 */
-    height: 20px;
+    height: 15px;
     /* 圆环的内部直径 */
 
     /* 添加5px厚度的天蓝色边框来创建圆环 */
