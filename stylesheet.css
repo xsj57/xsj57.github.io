@@ -1,11 +1,11 @@
-/* --- 第一步：定义完整的 "Bookman Old Style" 字体家族 --- */
+/* --- 定义完整的 "Bookman Old Style" 字体家族 --- */
 
 /* 1. 定义常规体 (Regular) */
 @font-face {
     font-family: 'Bookman Old Style';
+    /* 确保这个文件名与你上传的文件名大小写完全一致 */
     src: url('fonts/bookmanoldstyle.woff2') format('woff2');
     font-weight: normal;
-    /* normal 等同于 400 */
     font-style: normal;
 }
 
@@ -22,7 +22,6 @@
     font-family: 'Bookman Old Style';
     src: url('fonts/bookmanoldstyle_bold.woff2') format('woff2');
     font-weight: bold;
-    /* bold 等同于 700 */
     font-style: normal;
 }
 
@@ -35,12 +34,12 @@
 }
 
 
-/* --- 第二步：在下面的样式中应用你的新字体 --- */
+/* --- 应用你的新字体 --- */
 
 body {
     margin: 20px auto;
     padding: 0;
-    /* 将 'Bookman Old Style' 设置为默认字体 */
+    /* 应用新字体，这里是关键 */
     font-family: 'Bookman Old Style', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
@@ -57,7 +56,6 @@ h2,
 .name {
     font-family: 'Bookman Old Style', 'Georgia', 'Times New Roman', Times, serif;
     font-weight: bold;
-    /* 浏览器会自动选择粗体文件 */
 }
 
 h2 {
@@ -77,17 +75,13 @@ h2 {
     font-size: 32px;
 }
 
-/* 用来包裹需要斜体的日期和链接的样式 */
 .italic-text {
     font-style: italic;
-    /* 浏览器会自动选择斜体文件 */
 }
 
-/* 用来包裹需要粗斜体的关键字的样式 */
 .bold-italic-text {
     font-weight: bold;
     font-style: italic;
-    /* 浏览器会自动选择粗斜体文件 */
 }
 
 a {
@@ -113,8 +107,9 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    /* 按照你的要求修改为 15px */
+    width: 15px;
+    height: 15px;
     border: 5px solid #87CEEB;
     border-radius: 50%;
     pointer-events: none;
