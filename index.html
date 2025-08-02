@@ -25,19 +25,36 @@
             <p class="bio">你好，世界！我是一名开发者 / 设计师 / 学生...</p>
         </header>
 
+        <!-- 这是修改后的 <main> 部分 -->
         <main>
-            <h2>关于我</h2>
-            <p>这里可以写一段详细的自我介绍。说明你的兴趣、技能、项目经验等等。保持简洁，突出重点。</p>
-
-            <h2>链接</h2>
-            <ul>
-                <!-- 修改链接和文字 -->
-                <li><a href="https://github.com/xsj57" target="_blank">GitHub</a></li>
-                <li><a href="mailto:mail@xsj57.cn">邮箱</a></li>
-                <!-- 你可以添加更多链接，比如博客、社交媒体等 -->
-                <!-- <li><a href="#" target="_blank">博客</a></li> -->
-            </ul>
+            <!-- 双栏布局的容器 -->
+            <div class="two-column-container">
+        
+                <!-- 左边栏：关于我 -->
+                <div class="column">
+                    <h2>关于我</h2>
+                    <p>这里可以写一段详细的自我介绍。说明你的兴趣、技能、项目经验等等。保持简洁，突出重点。</p>
+                </div>
+        
+                <!-- 右边栏：链接 -->
+                <div class="column">
+                    <h2>链接</h2>
+                    <ul>
+                        <li><a href="https://github.com/你的用户名" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:你的邮箱@example.com">邮箱</a></li>
+                    </ul>
+                </div>
+        
+            </div> <!-- 双栏容器结束 -->
+        
+            <!-- 后半部分的单栏内容 -->
+            <div class="single-column-section">
+                <h2>我的项目</h2>
+                <p>这里可以开始写你的单栏内容。例如，你可以详细介绍一个你引以为傲的项目，或者写一篇简短的博客文章等等。这部分会占据全部的宽度。</p>
+            </div>
+        
         </main>
+
 
         <footer>
             <p>&copy; 2025 Eric。保留所有权利。</p>

@@ -31,8 +31,8 @@ header {
 
 /* 头像样式 */
 .avatar {
-    width: 450px;
-    height: 600px;
+    width: 150px;
+    height: 200px;
     border-radius: 0%;
     /* 圆形头像 */
     border: 3px solid #ddd;
@@ -88,4 +88,38 @@ footer {
     margin-top: 50px;
     color: #888;
     font-size: 0.9em;
+}
+/* --- 新增的布局样式 --- */
+
+/* 双栏容器：设置为 Flex 布局 */
+.two-column-container {
+    display: flex;
+    /* 启用 Flexbox 布局 */
+    gap: 40px;
+    /* 设置两栏之间的间距 */
+    margin-bottom: 40px;
+    /* 和下方的单栏内容拉开距离 */
+}
+
+/* 栏目通用样式 */
+.column {
+    flex: 1;
+    /* 让每个栏目都占据相等的空间 (1代表一份) */
+}
+
+/* 单栏部分 (目前不需要特殊样式，但预留) */
+.single-column-section {
+    /* 你可以在这里为单栏部分添加特定样式 */
+}
+
+
+/* 响应式设计：让页面在小屏幕上自动变回单栏 */
+/* 当浏览器宽度小于等于 768px 时 (典型的平板和手机) */
+@media (max-width: 768px) {
+    .two-column-container {
+        flex-direction: column;
+        /* 将主轴方向改为垂直，实现堆叠效果 */
+        gap: 0;
+        /* 堆叠后，列间距设为0 */
+    }
 }
