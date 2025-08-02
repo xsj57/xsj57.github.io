@@ -130,3 +130,41 @@ body {
     transform: translate(-50%, -50%);
     z-index: 9999;
 }
+
+/* --- 社交媒体图标样式 --- */
+
+/* 图标容器的样式 */
+.social-icons {
+    text-align: center;
+    /* 让图标居中对齐 */
+    margin-top: 15px;
+    /* 与上方的头像拉开一些距离 */
+}
+
+/* SVG 图标本身的样式 */
+.social-icons svg {
+    width: 24px;
+    /* 设置图标宽度 */
+    height: 24px;
+    /* 设置图标高度 */
+    fill: #888;
+    /* 设置图标默认颜色为灰色 */
+    transition: fill 0.3s ease;
+    /* 添加平滑的颜色过渡效果 */
+}
+
+/* 鼠标悬停在链接上时，SVG图标的样式 */
+.social-icons a:hover svg {
+    fill: #0077b5;
+    /* 鼠标悬停时变为经典的LinkedIn蓝色 */
+}
+
+/* 分隔符的样式 */
+.separator {
+    color: #ccc;
+    /* 分隔符颜色设为浅灰色，不那么显眼 */
+    margin: 0 10px;
+    /* 与左右的图标拉开距离 */
+    vertical-align: middle;
+    /* 确保它和图标垂直居中 */
+}
