@@ -27,8 +27,8 @@
                             <tr style="padding:0px">
                                 <!-- 左栏: 头像 -->
                                 <td style="padding:2.5%;width:37%;max-width:37%">
-                                    <!-- 确保图片路径正确 -->
-                                    <img style="width:100%;max-width:100%;border-radius: 0%;" alt="profile photo"
+                                    <!-- 已将图片路径修正为 media/ -->
+                                    <img style="width:100%;max-width:100%;border-radius: 50%;" alt="profile photo"
                                         src="media/avatar.jpg">
                                 </td>
                                 <!-- 右栏: 个人简介和链接 -->
@@ -53,7 +53,57 @@
                         </tbody>
                     </table>
 
-                    <!-- 中部: 研究标题 -->
+                    <!-- 新增: 教育经历 -->
+                    <table
+                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:16px;width:100%;vertical-align:middle">
+                                    <h2>Education</h2>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table
+                        style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+                        <tbody>
+                            <tr>
+                                <td style="padding:16px;width:25%;vertical-align:middle">
+                                    <!-- 你可以放学校的Logo在这里 -->
+                                    <img src="media/university_logo.png" alt="university logo"
+                                        style="width:100%; border:1px solid #ddd;">
+                                </td>
+                                <td style="padding:16px;width:75%;vertical-align:middle">
+                                    <span class="papertitle">Example University</span>
+                                    <br>
+                                    Ph.D. in Computer Science
+                                    <br>
+                                    <em>Sep 2022 - Present</em>
+                                    <p>
+                                        You can write a brief description about your study or research focus here.
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:16px;width:25%;vertical-align:middle">
+                                    <img src="media/university_logo_2.png" alt="university logo"
+                                        style="width:100%; border:1px solid #ddd;">
+                                </td>
+                                <td style="padding:16px;width:75%;vertical-align:middle">
+                                    <span class="papertitle">Another University</span>
+                                    <br>
+                                    B.S. in Electrical Engineering
+                                    <br>
+                                    <em>Sep 2018 - Jun 2022</em>
+                                    <p>
+                                        Graduated with honors.
+                                    </p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- 研究与项目 -->
                     <table
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
@@ -68,17 +118,12 @@
                             </tr>
                         </tbody>
                     </table>
-
-                    <!-- 详细项目列表 -->
                     <table
                         style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
-
-                            <!-- 第一个项目 (高亮) -->
                             <tr class="highlight-row">
                                 <td style="padding:16px;width:25%;vertical-align:middle">
-                                    <!-- 你可以在这里放项目图片 -->
-                                    <img src="images/project1.jpg" alt="project image"
+                                    <img src="media/project1.jpg" alt="project image"
                                         style="width:100%; border:1px solid #ddd;">
                                 </td>
                                 <td style="padding:16px;width:75%;vertical-align:middle">
@@ -97,29 +142,6 @@
                                     </p>
                                 </td>
                             </tr>
-
-                            <!-- 第二个项目 -->
-                            <tr>
-                                <td style="padding:16px;width:25%;vertical-align:middle">
-                                    <img src="images/project2.jpg" alt="project image"
-                                        style="width:100%; border:1px solid #ddd;">
-                                </td>
-                                <td style="padding:16px;width:75%;vertical-align:middle">
-                                    <a href="your_project_link">
-                                        <span class="papertitle">Another Awesome Project Title</span>
-                                    </a>
-                                    <br>
-                                    <strong>Your Name</strong>, Author Two, Author Three
-                                    <br>
-                                    <em>Conference or Journal Name</em>, 2024
-                                    <br>
-                                    <a href="#">[Project Page]</a> / <a href="#">[Code]</a>
-                                    <p>
-                                        A short description of this other project.
-                                    </p>
-                                </td>
-                            </tr>
-
                         </tbody>
                     </table>
 
@@ -127,7 +149,7 @@
             </tr>
     </table>
 
-    <!-- 重要: 在 body 闭合前引入 JavaScript 文件 -->
+    <!-- 引入 JavaScript 文件 -->
     <script src="js/main.js"></script>
 
 </body>
