@@ -1,0 +1,79 @@
+body {
+    margin: 20px auto;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+p {
+    text-align: justify;
+}
+
+h2 {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 24px;
+    font-weight: normal;
+    color: #111;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 8px;
+    margin-top: 40px;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.papertitle {
+    font-weight: bold;
+    color: #555;
+    font-size: 18px;
+}
+
+.name {
+    font-family: 'Georgia', 'Times New Roman', Times, serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.highlight-row {
+    background-color: #ffffd0;
+}
+
+/* --- 自定义光标样式 --- */
+
+/* 隐藏页面和链接的默认光标 */
+a,
+body {
+    cursor: none;
+}
+
+/* 我们新光标的样式 */
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    background-color: #61bfe4;
+    border-radius: 50%;
+    /* 让它变成圆形 */
+
+    /* 关键: 允许点击事件穿透这个光标元素 */
+    pointer-events: none;
+
+    /* 将圆心对准指针, 而不是左上角 */
+    transform: translate(-50%, -50%);
+
+    /* 平滑的移动过渡效果 */
+    transition: 0.1s;
+
+    /* 确保光标在所有元素之上 */
+    z-index: 9999;
+}
