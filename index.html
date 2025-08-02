@@ -27,8 +27,7 @@
                             <tr style="padding:0px">
                                 <!-- 左栏: 头像 -->
                                 <td style="padding:2.5%;width:37%;max-width:37%">
-                                    <!-- 已将图片路径修正为 media/ -->
-                                    <img style="width:100%;max-width:100%;border-radius: 50%;" alt="profile photo"
+                                    <img style="width:100%;max-width:100%;border-radius: 0%;" alt="profile photo"
                                         src="media/avatar.jpg">
                                 </td>
                                 <!-- 右栏: 个人简介和链接 -->
@@ -37,13 +36,14 @@
                                         Your Name
                                     </p>
                                     <p>
-                                        I am a PhD student at Example University / a research scientist at Example Corp.
-                                        My research interests include <a href="#">Machine Learning</a>, <a
-                                            href="#">Computer Vision</a>, and <a href="#">Generative AI</a>. This
-                                        website hosts my projects and publications.
+                                        I am a PhD student at Example University. My research interests include
+                                        <a href="#"><span class="bold-italic-text">Machine Learning</span></a>,
+                                        <a href="#"><span class="bold-italic-text">Computer Vision</span></a>, and
+                                        <a href="#"><span class="bold-italic-text">Generative AI</span></a>.
                                     </p>
                                     <p style="text-align:center">
-                                        <a href="mailto:youremail@example.com">Email</a> &nbsp;/&nbsp;
+                                        <a href="mailto:youremail@example.com"><span
+                                                class="italic-text">Email</span></a> &nbsp;/&nbsp;
                                         <a href="data/cv.pdf">CV</a> &nbsp;/&nbsp;
                                         <a href="your_google_scholar_link">Google Scholar</a> &nbsp;/&nbsp;
                                         <a href="https://github.com/your-username/">Github</a>
@@ -53,7 +53,7 @@
                         </tbody>
                     </table>
 
-                    <!-- 新增: 教育经历 -->
+                    <!-- 教育经历 -->
                     <table
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
@@ -69,7 +69,6 @@
                         <tbody>
                             <tr>
                                 <td style="padding:16px;width:25%;vertical-align:middle">
-                                    <!-- 你可以放学校的Logo在这里 -->
                                     <img src="media/university_logo.png" alt="university logo"
                                         style="width:100%; border:1px solid #ddd;">
                                 </td>
@@ -78,7 +77,7 @@
                                     <br>
                                     Ph.D. in Computer Science
                                     <br>
-                                    <em>Sep 2022 - Present</em>
+                                    <span class="italic-text">Sep 2022 - Present</span>
                                     <p>
                                         You can write a brief description about your study or research focus here.
                                     </p>
@@ -94,7 +93,7 @@
                                     <br>
                                     B.S. in Electrical Engineering
                                     <br>
-                                    <em>Sep 2018 - Jun 2022</em>
+                                    <span class="italic-text">Sep 2018 - Jun 2022</span>
                                     <p>
                                         Graduated with honors.
                                     </p>
@@ -110,10 +109,6 @@
                             <tr>
                                 <td style="padding:16px;width:100%;vertical-align:middle">
                                     <h2>Research & Projects</h2>
-                                    <p>
-                                        A brief summary of your research interests or project focus. For example: I'm
-                                        interested in creating intelligent systems that can understand the visual world.
-                                    </p>
                                 </td>
                             </tr>
                         </tbody>
@@ -133,7 +128,7 @@
                                     <br>
                                     Author One, Author Two, <strong>Your Name</strong>
                                     <br>
-                                    <em>Conference or Journal Name</em>, 2025
+                                    <em>Conference or Journal Name, <span class="italic-text">2025</span></em>
                                     <br>
                                     <a href="#">[Project Page]</a> / <a href="#">[Code]</a> / <a href="#">[Paper]</a>
                                     <p>

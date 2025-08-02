@@ -1,7 +1,47 @@
+/* --- 第一步：定义完整的 "Bookman Old Style" 字体家族 --- */
+
+/* 1. 定义常规体 (Regular) */
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('fonts/bookmanoldstyle.woff2') format('woff2');
+    font-weight: normal;
+    /* normal 等同于 400 */
+    font-style: normal;
+}
+
+/* 2. 定义斜体 (Italic) */
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('fonts/bookmanoldstyle_italic.woff2') format('woff2');
+    font-weight: normal;
+    font-style: italic;
+}
+
+/* 3. 定义粗体 (Bold) */
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('fonts/bookmanoldstyle_bold.woff2') format('woff2');
+    font-weight: bold;
+    /* bold 等同于 700 */
+    font-style: normal;
+}
+
+/* 4. 定义粗斜体 (Bold Italic) */
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('fonts/bookmanoldstyle_bolditalic.woff2') format('woff2');
+    font-weight: bold;
+    font-style: italic;
+}
+
+
+/* --- 第二步：在下面的样式中应用你的新字体 --- */
+
 body {
     margin: 20px auto;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* 将 'Bookman Old Style' 设置为默认字体 */
+    font-family: 'Bookman Old Style', Arial, Helvetica, sans-serif;
     font-size: 16px;
     line-height: 1.5;
     color: #333;
@@ -11,14 +51,43 @@ p {
     text-align: justify;
 }
 
+/* 标题使用粗体 */
+h2,
+.papertitle,
+.name {
+    font-family: 'Bookman Old Style', 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: bold;
+    /* 浏览器会自动选择粗体文件 */
+}
+
 h2 {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
     font-size: 24px;
-    font-weight: normal;
     color: #111;
     border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
     margin-top: 40px;
+}
+
+.papertitle {
+    color: #555;
+    font-size: 18px;
+}
+
+.name {
+    font-size: 32px;
+}
+
+/* 用来包裹需要斜体的日期和链接的样式 */
+.italic-text {
+    font-style: italic;
+    /* 浏览器会自动选择斜体文件 */
+}
+
+/* 用来包裹需要粗斜体的关键字的样式 */
+.bold-italic-text {
+    font-weight: bold;
+    font-style: italic;
+    /* 浏览器会自动选择粗斜体文件 */
 }
 
 a {
@@ -30,46 +99,25 @@ a:hover {
     text-decoration: underline;
 }
 
-.papertitle {
-    font-weight: bold;
-    color: #555;
-    font-size: 18px;
-}
-
-.name {
-    font-family: 'Georgia', 'Times New Roman', Times, serif;
-    font-size: 32px;
-    font-weight: bold;
-}
-
 .highlight-row {
     background-color: #ffffd0;
 }
 
 /* --- 自定义光标样式 --- */
-
-/* 隐藏页面和链接的默认光标 */
 a,
 body {
     cursor: none;
 }
 
-/* 我们新光标的样式 */
 .cursor {
     position: fixed;
     top: 0;
     left: 0;
-    width: 15px;
-    /* 圆环的内部直径 */
-    height: 15px;
-    /* 圆环的内部直径 */
-
-    /* 添加5px厚度的天蓝色边框来创建圆环 */
-    border: 5px solid #5abce2;
-
+    width: 20px;
+    height: 20px;
+    border: 5px solid #87CEEB;
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-
     z-index: 9999;
 }
