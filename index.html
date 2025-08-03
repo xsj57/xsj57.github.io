@@ -41,6 +41,15 @@
         </svg>
     </button>
 
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5,12 12,5 19,12"></polyline>
+        </svg>
+    </button>
+
     <!-- 自定义光标的元素 -->
     <div class="cursor"></div>
 
@@ -72,12 +81,16 @@
                     </td>
                     <!-- 右栏: 个人简介和链接 -->
                     <td class="profile-text-column" style="padding:2.5%;width:63%;">
-                        <p class="name" style="text-align: center;">Shijie Xu</p>
+                        <!-- 修改姓名部分支持打字机效果 -->
+                        <p class="name" style="text-align: center;">
+                            <span id="typewriter-name"></span>
+                            <span class="typewriter-cursor">|</span>
+                        </p>
                         <p>
                             I am a third-year master's student pursuing a Master's degree in Forestry Engineering at
                             Fujian Agriculture and Forestry University. I am also a member of the Vegetable Oil-based 3D
                             Printing team led by Prof. Qiu Renhui. The research we are currently conducting includes
-                            <a href="#"><span class="bold-text">vegetable oil-based 3D printing</span></a> 
+                            <a href="#"><span class="bold-text">vegetable oil-based 3D printing</span></a>
                             inks and accompanying light-cured 3D printing and Direct Ink Writing (
                             <a href="#"><span class="bold-text">DIW</span></a>
                             ) 3D printing. My research interests include
@@ -128,14 +141,14 @@
                 </tr>
             </tbody>
         </table>
-
-        <!-- 研究与项目 -->
+                
+        <!-- 研究 -->
         <table class="section-to-animate"
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
                 <tr>
                     <td style="padding:16px;width:100%;vertical-align:middle">
-                        <h2>Research & Projects</h2>
+                        <h2>Research</h2>
                     </td>
                 </tr>
             </tbody>
@@ -145,23 +158,53 @@
             <tbody>
                 <tr class="highlight-row">
                     <td style="padding:16px;width:25%;vertical-align:middle">
-                        <img src="media/project1.jpg" alt="project image" style="width:100%; border:1px solid #ddd;">
+                        <img src="media/research/1.jpg" alt="project image" style="width:100%; border:1px solid #ddd;">
                     </td>
                     <td style="padding:16px;width:75%;vertical-align:middle">
-                        <a href="your_project_link"><span class="papertitle">Project Title One (e.g., A Cool AI
-                                Project)</span></a><br>
-                        Author One, Author Two, <strong>Shijie Xu</strong><br>
-                        <em>Conference or Journal Name, <span class="italic-text">2025</span></em><br>
-                        <a href="#">[Project Page]</a> / <a href="#">[Code]</a> / <a href="#">[Paper]</a>
-                        <p>A short description of this project, explaining its purpose and key contributions.</p>
+                        <a href="https://github.com/xsj57/"><span class="papertitle">Vegetable Oil-based DIW 3D Printing</span></a><br>
+                        <strong>Shijie Xu</strong>, Li Ying<br>
+                        <em>Hope is nature, <span class="italic-text">2025</span></em><br>
+                        <a href="#">[Research Page]</a> / <a href="#">[Code]</a> / <a href="#">[Paper]</a>
+                        <p>Unpublished research.</p>
                     </td>
                 </tr>
             </tbody>
         </table>
 
+        <!-- 项目 -->
+        <table class="section-to-animate"
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+                <tr>
+                    <td style="padding:16px;width:100%;vertical-align:middle">
+                        <h2>Projects</h2>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <table
+            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+                <tr class="projects-row">
+                    <td style="padding:16px;width:25%;vertical-align:middle">
+                        <img src="media/project/1.jpg" alt="project image" class="project-thumbnail"
+                            style="width:100%; border:1px solid #ddd;" onclick="window.location.href='project-detail.html'">
+                    </td>
+                    <td style="padding:16px;width:75%;vertical-align:middle">
+                        <a href="project-detail.html"><span class="papertitle">G-code project for DIW printer</span></a><br>
+                        <strong>Shijie Xu</strong><br>
+                        <em>Code writing, <span class="italic-text">2025 - Present</span></em><br>
+                        <p>Compile G-code for DIW printers, using Python to generate or modify G-code recognizable by the printer, and
+                        use the G-code to control the dispensing machine.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+
         <!-- 页脚 -->
         <footer>
-            <p class="copyright">© 2025 Eric Xu. All rights reserved.</p>
+            <p class="copyright">© 2025 Eric Xu. Created in Fuzhou.</p>
         </footer>
 
     </div>

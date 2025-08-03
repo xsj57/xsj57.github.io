@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Project Details - 徐世杰 Shijie Xu</title>
+    <meta name="author" content="徐世杰 Shijie Xu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" type="image/png" href="media/favicon.png">
+
+    <!-- 防止深色模式加载时页面闪烁 -->
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- 主题切换按钮 -->
+    <button id="theme-toggle" title="Toggle dark/light mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5,12 12,5 19,12"></polyline>
+        </svg>
+    </button>
+
+    <!-- 自定义光标的元素 -->
+    <div class="cursor"></div>
+
+    <!-- 页面主容器 -->
+    <div class="page-container">
+
+        <!-- 返回主页链接 -->
+        <div style="margin-bottom: 30px;">
+            <a href="index.html" style="font-size: 16px;">← Back to Home</a>
+        </div>
+
+        <!-- 项目标题 -->
+        <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+                <tr>
+                    <td style="padding:16px;width:100%;vertical-align:middle">
+                        <h1 style="font-size: 42px; margin-bottom: 10px; text-align: center;">Project Details</h1>
+                        <p style="text-align: center; font-size: 24px; color: #666; margin-bottom: 40px;">G-code project
+                            for DIW printer</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 项目详细内容 -->
+        <div class="project-wrapper">
+            <!-- 目录 -->
+            <div class="project-content">
+                <h2>Table of Contents</h2>
+                <div class="table-of-contents">
+                    <ul>
+                        <li><a href="#section1">1. pyramid</a></li>
+                        <li><a href="#section2">2. transGcode</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 第一个副标题 -->
+            <div class="project-content">
+                <h3 id="section1">1. pyramid</h3>
+                <p>
+                    The AI-assisted 3D printing system is built on a modular architecture that integrates machine
+                    learning algorithms with real-time monitoring capabilities. This system continuously analyzes
+                    printing parameters and environmental conditions to optimize the printing process and prevent
+                    potential failures before they occur.
+                </p>
+                <p>
+                    Key components include sensor data collection, neural network processing, and automated
+                    parameter adjustment mechanisms that work together to ensure consistent print quality.
+                </p>
+
+                <!-- GitHub Gist 嵌入 - pyramid.py -->
+                <h4>Implementation Code:</h4>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/xsj57/96bc504c6dde9fbd37ea8fdb89009da2.js"></script>
+                </div>
+            </div>
+
+            <!-- 第二个副标题 -->
+            <div class="project-content">
+                <h3 id="section2">2. transGcode</h3>
+                <p>
+                    The transGcode module provides advanced G-code transformation capabilities for optimizing print
+                    paths
+                    and ensuring compatibility with different 3D printer configurations. This module can translate,
+                    rotate,
+                    and scale G-code instructions while maintaining the integrity of the print structure.
+                </p>
+                <p>
+                    Key features include coordinate transformation, speed optimization, and automatic path correction
+                    algorithms that ensure smooth and efficient printing operations.
+                </p>
+
+                <!-- GitHub Gist 嵌入 - transGcode.py -->
+                <h4>Implementation Code:</h4>
+                <div class="gist-container">
+                    <script src="https://gist.github.com/xsj57/69829c86f61673e09fc2e2984ae83264.js"></script>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <p class="copyright">© 2025 Eric Xu. Created in Fuzhou.</p>
+        </footer>
+
+    </div>
+
+    <!-- 引入 JavaScript 文件 -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
