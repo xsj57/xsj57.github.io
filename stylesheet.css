@@ -260,3 +260,24 @@ html.dark-mode #theme-toggle svg {
     opacity: 1;
     transform: translateY(0);
 }
+
+/* --- 新增：页脚样式 --- */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #888;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* 深色模式下的页脚样式 */
+html.dark-mode footer {
+    border-top-color: #30363d;
+    color: #777;
+}
