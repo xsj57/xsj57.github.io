@@ -45,11 +45,11 @@ body {
     padding: 0;
     font-family: 'EB Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
-    font-size: 17px;
+    /* 核心改动 1：正文/简介字体从 17px 增加到 19px */
+    font-size: 19px;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
-    /* 纯白背景 */
 }
 
 p {
@@ -77,7 +77,8 @@ h2 {
 }
 
 .name {
-    font-size: 34px;
+    /* 核心改动 2：姓名 Shijie Xu 字体从 34px 增加到 36px */
+    font-size: 36px;
 }
 
 .italic-text {
@@ -186,7 +187,6 @@ body {
 /* 深色模式 (Dark Mode) 样式 */
 html.dark-mode body {
     background-color: #000000;
-    /* 纯黑背景 */
     color: #c9d1d9;
 }
 
