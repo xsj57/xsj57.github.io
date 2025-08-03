@@ -289,6 +289,11 @@ html.dark-mode footer {
 
 /* --- 响应式布局：手机版本 (小于768px) --- */
 @media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    /* 让表格单元格垂直堆叠 */
     .profile-row>td {
         display: block !important;
         width: 100% !important;
@@ -296,70 +301,66 @@ html.dark-mode footer {
         padding: 0 !important;
     }
 
-    .profile-avatar-image {
-        display: block !important;
-        margin: 20px auto 0 auto !important;
-        max-width: 35% !important;
-        min-width: 140px !important;
+    /* 强制头像列居中 */
+    .profile-row .profile-avatar-column {
+        text-align: center !important;
+        padding: 20px 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
+    /* 头像容器完全居中 */
+    .avatar-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+    }
+
+    /* 头像图片居中并放大1.2倍 (35% * 1.2 = 42%) */
+    .profile-avatar-image {
+        display: block !important;
+        margin: 0 auto 20px auto !important;
+        max-width: 42% !important;
+        /* 从35%改为42%，实现1.2倍放大 */
+        min-width: 168px !important;
+        /* 从140px改为168px (140*1.2) */
+    }
+
+    /* 社交图标居中 */
     .social-icons {
-        margin-top: 15px !important;
+        margin-top: 0 !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
         gap: 12px !important;
+        width: 100% !important;
     }
 
+    /* 个人介绍部分：左右各加8px间距 */
     .profile-text-column {
         top: 0 !important;
         margin-top: 25px !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
     }
 
-    .avatar-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        /* 垂直居中 */
-        width: 100%;
-        margin: 0 auto;
-        /* 水平居中 */
+    /* 确保个人介绍内的段落也有合适间距 */
+    .profile-text-column p {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 
-    .profile-avatar-image {
-        display: block;
-        margin: 0 auto 20px;
-        /* 头像居中，下方留出间距给社交图标 */
-        max-width: 35%;
-        /* 按要求缩小头像尺寸 */
-        min-width: 140px;
-        /* 避免在极窄屏幕上过小 */
-    }
-
-    /* 确保社交图标在手机端也完美居中 */
-    .social-icons {
-        margin-top: 0;
-        /* 重置上边距，因为头像已经有下边距了 */
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        /* 水平居中 */
-        gap: 12px;
-        width: 100%;
-    }
-
-    .profile-text-column {
-        top: 0;
-        /* 重置桌面端的垂直微调 */
-        margin-top: 25px;
-        /* 在文字和头像之间增加一些间距 */
-    }
-
-    /* 手机端姓名也居中 */
+    /* 手机端姓名字号调整 */
     .name {
-        font-size: 32px;
-        /* 稍微减小手机端的字号 */
+        font-size: 32px !important;
+    }
+
+    /* 确保链接部分也保持居中，不受左右间距影响 */
+    .profile-links {
+        text-align: center !important;
     }
 }
 
