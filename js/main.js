@@ -28,3 +28,19 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     });
 });
+// --- 新增：滚动加载动画逻辑 ---
+    const animatedSections = document.querySelectorAll('.section-to-animate');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('section-is-visible');
+            }
+        });
+    }, {
+        threshold: 0.1 // 当元素可见10%时触发
+    });
+
+    animatedSections.forEach(section => {
+        observer.observe(section);
+    });

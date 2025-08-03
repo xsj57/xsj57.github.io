@@ -46,7 +46,7 @@ body {
     font-family: 'EB Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
     /* 核心改动 1：正文/简介字体从 17px 增加到 19px */
-    font-size: 19px;
+    font-size: 18px;
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -242,4 +242,20 @@ html.dark-mode #theme-toggle svg {
     body {
         cursor: auto;
     }
+}
+
+/* --- 滚动加载动画样式 --- */
+.section-to-animate {
+    opacity: 0;
+    /* 默认状态：透明 */
+    transform: translateY(20px);
+    /* 默认状态：向下偏移20px */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.section-is-visible {
+    opacity: 1;
+    /* 可见状态：完全不透明 */
+    transform: translateY(0);
+    /* 可见状态：回到原位 */
 }
