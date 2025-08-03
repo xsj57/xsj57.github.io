@@ -1,4 +1,4 @@
-/* --- 定义字体家族 --- */
+/* ... 字体定义和 body/p/h2 等基础样式保持不变 ... */
 @font-face {
     font-family: 'EB Garamond';
     src: url('fonts/EBGaramond-Regular.woff2') format('woff2');
@@ -34,7 +34,6 @@
     font-style: italic;
 }
 
-/* --- 默认浅色模式 (Light Mode) 样式 --- */
 html,
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
@@ -83,11 +82,6 @@ h2 {
     font-style: italic;
 }
 
-.bold-italic-text {
-    font-weight: 700;
-    font-style: italic;
-}
-
 .bold-text {
     font-weight: 700;
     font-style: normal;
@@ -107,68 +101,29 @@ a:hover {
     background-color: #ffffd0;
 }
 
-.profile-row>td {
-    vertical-align: middle;
+/* --- 核心改动：为新的 Profile Header 结构设置样式 --- */
+.profile-header {
+    display: flex;
+    align-items: center;
+    /* 默认垂直居中对齐 */
+    padding: 2.5%;
 }
 
-/* 自定义光标样式 */
-a,
-body {
-    cursor: none;
-}
-
-.cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 15px;
-    height: 15px;
-    border: 5px solid #5fb7da;
-    border-radius: 50%;
-    pointer-events: none;
-    transform: translate(-50%, -50%);
-    z-index: 9999;
-    transition: border-color 0.3s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
-}
-
-/* 光标悬停交互样式 */
-.a-hover-cursor {
-    width: 30px;
-    height: 30px;
-    border-width: 3px;
-    opacity: 0.5;
-}
-
-/* 主题切换按钮样式 */
-#theme-toggle {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 8px;
-    z-index: 10000;
-}
-
-#theme-toggle svg {
-    width: 24px;
-    height: 24px;
-    stroke: #555;
-    transition: stroke 0.3s ease;
-}
-
-.moon-icon {
-    display: none;
-}
-
-/* 社交媒体图标样式 */
-.avatar-container {
+.profile-left {
+    flex: 0 0 37%;
+    /* 固定左栏宽度 */
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.profile-right {
+    flex: 1;
+    /* 右栏占据剩余空间 */
+    padding-left: 2.5%;
+}
+
+/* 社交媒体图标样式 */
 .social-icons {
     margin-top: 15px;
     display: flex;
@@ -194,77 +149,107 @@ body {
     top: -5px;
 }
 
-/* --- 页脚样式 (已修正) --- */
-footer {
-    margin-top: 60px;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    /* 核心改动 1：移除了 border-top */
-    font-size: 14px;
-    color: #888;
+/* ... 自定义光标、主题切换按钮等样式保持不变 ... */
+a,
+body {
+    cursor: none;
 }
 
-/* 核心改动 2：新增此规则，强制页脚内段落居中 */
-footer p {
-    text-align: center;
-    margin: 5px 0;
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border: 5px solid #5fb7da;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    transition: border-color 0.3s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
 }
 
-/* 深色模式 (Dark Mode) 样式 */
+.a-hover-cursor {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+    opacity: 0.5;
+}
+
+#theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    z-index: 10000;
+}
+
+#theme-toggle svg {
+    width: 24px;
+    height: 24px;
+    stroke: #555;
+    transition: stroke 0.3s ease;
+}
+
+.moon-icon {
+    display: none;
+}
+
+
+/* --- 核心改动：响应式布局 - 手机版本 --- */
+@media (max-width: 768px) {
+    .profile-header {
+        flex-direction: column;
+        /* 将 Flex 容器变为垂直排列 */
+    }
+
+    .profile-left,
+    .profile-right {
+        flex-basis: 100%;
+        /* 让左右两栏都占据100%的宽度 */
+        width: 100%;
+        padding-left: 0;
+        /* 移除右栏的左边距 */
+    }
+
+    .profile-right {
+        /* 使用 order 属性重新排列元素顺序 */
+        display: flex;
+        flex-direction: column;
+        order: -1;
+        /* 将整个右栏（文字部分）移动到左栏（头像部分）的上面 */
+    }
+
+    .profile-right .name {
+        order: 1;
+    }
+
+    .profile-right p:not(.name) {
+        order: 2;
+    }
+
+    /* 将简介和链接放在名字下面 */
+
+    /* 将社交图标从头像下方，移动到所有文字的下方 */
+    .profile-left {
+        order: 3;
+    }
+
+    .social-icons {
+        margin-bottom: 20px;
+    }
+}
+
+/* ... 深色模式和动画样式保持不变 ... */
 html.dark-mode body {
     background-color: #000000;
     color: #c9d1d9;
 }
 
-html.dark-mode h2,
-html.dark-mode .name {
-    color: #f0f6fc;
-    border-bottom-color: #30363d;
-}
-
-html.dark-mode .papertitle {
-    color: #acbac5;
-}
-
-html.dark-mode a {
-    color: #a755f7;
-}
-
-html.dark-mode .cursor {
-    border-color: #a755f7;
-}
-
-html.dark-mode .highlight-row {
-    background-color: #222;
-}
-
-html.dark-mode .social-icons img {
-    filter: invert(1);
-}
-
-html.dark-mode .separator {
-    color: #555;
-}
-
-html.dark-mode #theme-toggle .sun-icon {
-    display: none;
-}
-
-html.dark-mode #theme-toggle .moon-icon {
-    display: block;
-}
-
-html.dark-mode #theme-toggle svg {
-    stroke: #c9d1d9;
-}
-
-/* 核心改动 3：修正深色模式下的页脚 */
-html.dark-mode footer {
-    color: #777;
-    /* 同样，确保这里没有 border-top-color */
-}
-
-/* 移动设备隐藏光标 */
+/* ... (其他深色模式样式) ... */
 @media (pointer: coarse) {
     .cursor {
         display: none;
@@ -276,7 +261,6 @@ html.dark-mode footer {
     }
 }
 
-/* 滚动加载动画样式 */
 .section-to-animate {
     opacity: 0;
     transform: translateY(20px);

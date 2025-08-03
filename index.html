@@ -51,59 +51,49 @@
             <tr style="padding:0px">
                 <td style="padding:0px">
 
-                    <!-- 顶部: 个人信息 -->
-                    <table
-                        style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-                        <tbody>
-                            <!-- 核心改动：为 <tr> 添加 class="profile-row" -->
-                            <tr class="profile-row" style="padding:0px">
-                                <!-- 左栏: 头像和社交图标 -->
-                                <td style="padding:2.5%;width:37%;max-width:37%">
-                                    <div class="avatar-container">
-                                        <img style="width: 100%; max-width: 200px; border-radius: 0;"
-                                            alt="profile photo" src="media/avatar.jpg">
-                                        <div class="social-icons">
-                                            <a href="https://www.facebook.com/EricXussj" target="_blank"><img
-                                                    src="media/facebook.svg" alt="Facebook Icon"></a>
-                                            <span class="separator">|</span>
-                                            <a href="https://www.instagram.com/eric_xussj/" target="_blank"><img
-                                                    src="media/instagram.svg" alt="Instagram Icon"></a>
-                                            <span class="separator">|</span>
-                                            <a href="https://untappd.com/user/JieXuS" target="_blank"><img
-                                                    src="media/untappd.svg" alt="Untappd Icon"></a>
-                                        </div>
-                                    </div>
-                                </td>
-                                <!-- 右栏: 个人简介和链接 (移除了内联的 vertical-align 样式) -->
-                                <td style="padding:2.5%;width:63%;">
-                                    <p class="name" style="text-align: center;">Shijie Xu</p>
-                                    <p>
-                                        I am a third-year master's student pursuing a Master's degree in Forestry
-                                        Engineering at Fujian Agriculture and Forestry University. I am also a member of
-                                        the Vegetable Oil-based 3D Printing team led by Prof. Qiu Renhui. The research
-                                        we are currently conducting includes vegetable oil-based 3D printing inks and
-                                        accompanying light-cured 3D printing and Direct Ink Writing (
-                                        <a href="#"><span class="bold-text">DIW</span></a>
-                                        ) 3D printing. My research interests include
-                                        <a href="#"><span class="bold-text">3D Printing Ink</span></a>,
-                                        <a href="#"><span class="bold-text">3D Printer</span></a>, and
-                                        <a href="#"><span class="bold-text">AI-assisted 3D Printing</span></a>.
-                                    </p>
-                                    <p style="text-align:center">
-                                        <a href="mailto:mail@xsj57.cn"><span
-                                                class="italic-text">Email</span></a>&nbsp;/&nbsp;
-                                        <a href="data/cv.pdf">CV</a> &nbsp;/&nbsp;
-                                        <a href="your_google_scholar_link">Google Scholar</a> &nbsp;/&nbsp;
-                                        <a href="https://github.com/xsj57/">Github</a>
-                                    </p>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <!-- 核心改动：用新的 <section> 替换了旧的 <table> -->
+                    <section class="profile-header">
+                        <!-- 头像和社交图标 -->
+                        <div class="profile-left">
+                            <img style="width: 100%; max-width: 200px; border-radius: 0;" alt="profile photo"
+                                src="media/avatar.jpg">
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com/EricXussj" target="_blank"><img
+                                        src="media/facebook.svg" alt="Facebook Icon"></a>
+                                <span class="separator">|</span>
+                                <a href="https://www.instagram.com/eric_xussj/" target="_blank"><img
+                                        src="media/instagram.svg" alt="Instagram Icon"></a>
+                                <span class="separator">|</span>
+                                <a href="https://untappd.com/user/JieXuS" target="_blank"><img src="media/untappd.svg"
+                                        alt="Untappd Icon"></a>
+                            </div>
+                        </div>
+                        <!-- 姓名、简介和链接 -->
+                        <div class="profile-right">
+                            <p class="name" style="text-align: center;">Shijie Xu</p>
+                            <p>
+                                I am a third-year master's student pursuing a Master's degree in Forestry Engineering at
+                                Fujian Agriculture and Forestry University. I am also a member of the Vegetable
+                                Oil-based 3D Printing team led by Prof. Qiu Renhui. The research we are currently
+                                conducting includes vegetable oil-based 3D printing inks and accompanying light-cured 3D
+                                printing and Direct Ink Writing (
+                                <a href="#"><span class="bold-text">DIW</span></a>
+                                ) 3D printing. My research interests include
+                                <a href="#"><span class="bold-text">3D Printing Ink</span></a>,
+                                <a href="#"><span class="bold-text">3D Printer</span></a>, and
+                                <a href="#"><span class="bold-text">AI-assisted 3D Printing</span></a>.
+                            </p>
+                            <p style="text-align:center">
+                                <a href="mailto:mail@xsj57.cn"><span class="italic-text">Email</span></a>&nbsp;/&nbsp;
+                                <a href="data/cv.pdf">CV</a> &nbsp;/&nbsp;
+                                <a href="your_google_scholar_link">Google Scholar</a> &nbsp;/&nbsp;
+                                <a href="https://github.com/xsj57/">Github</a>
+                            </p>
+                        </div>
+                    </section>
 
-                    <!-- 教育经历 -->
-                    <table
-                        class="section-to-animate" 
+                    <!-- 教育经历 (表格结构保持不变) -->
+                    <table class="section-to-animate"
                         style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
                         <tbody>
                             <tr>
