@@ -34,15 +34,15 @@
     font-style: italic;
 }
 
-/* --- 基础样式 --- */
+/* --- 默认浅色模式 (Light Mode) 样式 --- */
 html,
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
-    margin: 0;
-    padding: 20px;
+    margin: 20px auto;
+    padding: 0 10px;
     font-family: 'EB Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 18px;
@@ -51,13 +51,15 @@ body {
     background-color: #ffffff;
 }
 
-.page-container {
-    max-width: 800px;
-    margin: 0 auto;
-}
-
 p {
     text-align: justify;
+}
+
+h2,
+.papertitle,
+.name {
+    font-family: 'EB Garamond', 'Georgia', 'Times New Roman', Times, serif;
+    font-weight: 700;
 }
 
 h2 {
@@ -68,11 +70,6 @@ h2 {
     margin-top: 40px;
 }
 
-.papertitle,
-.name {
-    font-weight: 700;
-}
-
 .papertitle {
     color: #555;
     font-size: 19px;
@@ -80,7 +77,6 @@ h2 {
 
 .name {
     font-size: 36px;
-    text-align: center;
 }
 
 .italic-text {
@@ -102,149 +98,36 @@ a:hover {
     text-decoration: underline;
 }
 
-.profile-links {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* --- 个人信息头部 (Profile Header) - 桌面/平板布局 --- */
-.profile-header {
-    display: grid;
-    grid-template-columns: 37% 1fr;
-    grid-template-rows: auto;
-    align-items: center;
-    gap: 0 2.5%;
-    padding: 2.5% 0;
-}
-
-.profile-left {
-    grid-column: 1;
-}
-
-.profile-avatar {
-    text-align: center;
-}
-
-.profile-avatar img {
-    max-width: 200px;
-    width: 100%;
-    border-radius: 0;
-}
-
-.profile-social {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 15px;
-}
-
-.profile-right {
-    grid-column: 2;
-    position: relative;
-    top: -15px;
-}
-
-/* 社交图标样式 */
-.profile-social img {
-    height: 24px;
-    width: auto;
-    transition: opacity 0.2s ease;
-}
-
-.profile-social a:hover img {
-    opacity: 0.7;
-}
-
-.separator {
-    color: #ccc;
-    font-size: 24px;
-    font-weight: 100;
-    position: relative;
-    top: -5px;
-}
-
-/* --- 内容区域 --- */
-.content-section {
-    margin-top: 20px;
-}
-
-.education-entry {
-    margin-bottom: 20px;
-}
-
-.project-entry {
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 16px;
-}
-
-.project-image {
-    flex: 0 0 25%;
-}
-
-.project-image img {
-    width: 100%;
-    border: 1px solid #ddd;
-}
-
-.project-description {
-    flex: 1;
-}
-
 .highlight-row {
     background-color: #ffffd0;
 }
 
-/* --- 页脚 --- */
-footer {
-    margin-top: 60px;
-    margin-bottom: 20px;
-    padding-top: 20px;
-    font-size: 14px;
-    color: #888;
+/* 桌面端对齐 */
+.profile-row>td {
+    vertical-align: middle;
 }
 
-footer p {
+.profile-text-column {
+    position: relative;
+    top: -15px;
+}
+
+.profile-links {
     text-align: center;
-    margin: 5px 0;
 }
 
-/* --- 响应式布局：手机版本 (小于768px) --- */
-@media (max-width: 768px) {
-    body {
-        padding: 20px;
-    }
-
-    .profile-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        padding: 0;
-    }
-
-    .profile-avatar {
-        order: 1;
-    }
-
-    .profile-social {
-        order: 2;
-    }
-
-    .profile-right {
-        order: 3;
-        top: 0;
-    }
-
-    /* 重置垂直微调 */
-    .project-entry {
-        flex-direction: column;
-    }
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-/* ... 其他所有光标、主题切换、动画、深色模式样式保持不变 ... */
+.profile-avatar-image {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 0;
+}
+
+/* 自定义光标样式 */
 a,
 body {
     cursor: none;
@@ -271,6 +154,7 @@ body {
     opacity: 0.5;
 }
 
+/* 主题切换按钮样式 */
 #theme-toggle {
     position: fixed;
     top: 20px;
@@ -293,6 +177,53 @@ body {
     display: none;
 }
 
+/* 社交媒体图标样式 */
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-icons {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.social-icons img {
+    height: 24px;
+    width: auto;
+    transition: opacity 0.2s ease;
+}
+
+.social-icons a:hover img {
+    opacity: 0.7;
+}
+
+.separator {
+    color: #ccc;
+    font-size: 24px;
+    font-weight: 100;
+    position: relative;
+    top: -5px;
+}
+
+/* 页脚样式 */
+footer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+footer p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* 深色模式 (Dark Mode) 样式 */
 html.dark-mode body {
     background-color: #000000;
     color: #c9d1d9;
@@ -320,7 +251,7 @@ html.dark-mode .highlight-row {
     background-color: #222;
 }
 
-html.dark-mode .profile-social img {
+html.dark-mode .social-icons img {
     filter: invert(1);
 }
 
@@ -340,6 +271,11 @@ html.dark-mode #theme-toggle svg {
     stroke: #c9d1d9;
 }
 
+html.dark-mode footer {
+    color: #777;
+}
+
+/* 移动设备隐藏光标 */
 @media (pointer: coarse) {
     .cursor {
         display: none;
@@ -351,6 +287,83 @@ html.dark-mode #theme-toggle svg {
     }
 }
 
+/* --- 响应式布局：手机版本 (小于768px) --- */
+@media (max-width: 768px) {
+    .profile-row>td {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .profile-avatar-image {
+        display: block !important;
+        margin: 20px auto 0 auto !important;
+        max-width: 35% !important;
+        min-width: 140px !important;
+    }
+
+    .social-icons {
+        margin-top: 15px !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 12px !important;
+    }
+
+    .profile-text-column {
+        top: 0 !important;
+        margin-top: 25px !important;
+    }
+
+    .avatar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        /* 垂直居中 */
+        width: 100%;
+        margin: 0 auto;
+        /* 水平居中 */
+    }
+
+    .profile-avatar-image {
+        display: block;
+        margin: 0 auto 20px;
+        /* 头像居中，下方留出间距给社交图标 */
+        max-width: 35%;
+        /* 按要求缩小头像尺寸 */
+        min-width: 140px;
+        /* 避免在极窄屏幕上过小 */
+    }
+
+    /* 确保社交图标在手机端也完美居中 */
+    .social-icons {
+        margin-top: 0;
+        /* 重置上边距，因为头像已经有下边距了 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* 水平居中 */
+        gap: 12px;
+        width: 100%;
+    }
+
+    .profile-text-column {
+        top: 0;
+        /* 重置桌面端的垂直微调 */
+        margin-top: 25px;
+        /* 在文字和头像之间增加一些间距 */
+    }
+
+    /* 手机端姓名也居中 */
+    .name {
+        font-size: 32px;
+        /* 稍微减小手机端的字号 */
+    }
+}
+
+/* 滚动加载动画样式 */
 .section-to-animate {
     opacity: 0;
     transform: translateY(20px);
