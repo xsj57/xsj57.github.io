@@ -41,8 +41,8 @@ body {
 }
 
 body {
-    margin: 20px auto;
-    padding: 0 10px;
+    margin: 0;
+    padding: 20px;
     font-family: 'EB Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 18px;
@@ -109,6 +109,12 @@ a:hover {
 .profile-text-column {
     position: relative;
     top: -15px;
+}
+
+/* 核心改动 1：为新的页面容器添加样式 */
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* 自定义光标样式 */
@@ -193,7 +199,7 @@ body {
     top: -5px;
 }
 
-/* --- 页脚样式 (已修正) --- */
+/* 页脚样式 */
 footer {
     margin-top: 60px;
     margin-bottom: 20px;
@@ -271,13 +277,18 @@ html.dark-mode footer {
     }
 }
 
-/* --- 响应式布局：手机版本 (小于768px) --- */
+/* 响应式布局：手机版本 (小于768px) */
 @media (max-width: 768px) {
     body {
         padding: 0 20px;
     }
 
     /* 增加两侧空隙 */
+    .page-container {
+        padding: 0;
+    }
+
+    /* 确保容器本身没有额外边距 */
     .profile-row>td {
         display: block;
         /* 让左右两栏垂直堆叠 */
@@ -285,6 +296,8 @@ html.dark-mode footer {
         max-width: 100%;
         padding-left: 0;
         padding-right: 0;
+        text-align: center;
+        /* 核心改动 2：让堆叠后的内容居中 */
     }
 
     .profile-text-column {
@@ -292,6 +305,10 @@ html.dark-mode footer {
         /* 重置桌面端的垂直微调 */
         margin-top: 20px;
         /* 在文字和头像之间增加一些间距 */
+    }
+
+    .avatar-container {
+        /* 这个容器已经是 flex 和 align-items: center，所以头像和社交图标会自动居中 */
     }
 }
 
