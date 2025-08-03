@@ -19,18 +19,63 @@ document.addEventListener('DOMContentLoaded', (event) => {
         });
     });
 
-    // --- 主题切换逻辑 ---
-    const themeToggleButton = document.getElementById('theme-toggle');
-    const docElement = document.documentElement;
-    themeToggleButton.addEventListener('click', () => {
-        if (docElement.classList.contains('dark-mode')) {
-            docElement.classList.remove('dark-mode');
-            localStorage.setItem('theme', 'light');
-        } else {
+// --- 主题切换逻辑（增强版） ---
+const themeToggleButton = document.getElementById('theme-toggle');
+const docElement = document.documentElement;
+
+// 初始化主题状态
+function initializeTheme() {
+    const savedTheme = localStorage.getItem('theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    // 决定当前应该使用的主题
+    const shouldUseDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
+    
+    if (shouldUseDark) {
+        docElement.classList.add('dark-mode');
+    } else {
+        docElement.classList.remove('dark-mode');
+    }
+    
+    // 如果没有保存的主题偏好，保存当前系统偏好
+    if (!savedTheme) {
+        localStorage.setItem('theme', systemPrefersDark ? 'dark' : 'light');
+    }
+}
+
+// 手动切换主题
+themeToggleButton.addEventListener('click', () => {
+    if (docElement.classList.contains('dark-mode')) {
+        docElement.classList.remove('dark-mode');
+        localStorage.setItem('theme', 'light');
+    } else {
+        docElement.classList.add('dark-mode');
+        localStorage.setItem('theme', 'dark');
+    }
+});
+
+// 监听系统主题变化
+const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+mediaQuery.addEventListener('change', (e) => {
+    const savedTheme = localStorage.getItem('theme');
+    
+    // 只有在用户没有手动设置主题时，才跟随系统变化
+    if (!savedTheme || savedTheme === 'auto') {
+        if (e.matches) {
             docElement.classList.add('dark-mode');
             localStorage.setItem('theme', 'dark');
+        } else {
+            docElement.classList.remove('dark-mode');
+            localStorage.setItem('theme', 'light');
         }
-    });
+    }
+});
+
+// 页面加载时确保主题正确应用
+document.addEventListener('DOMContentLoaded', () => {
+    initializeTheme();
+});
+
 
     // --- 滚动加载动画逻辑 ---
     const animatedSections = document.querySelectorAll('.section-to-animate');
