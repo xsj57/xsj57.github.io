@@ -149,3 +149,18 @@ body {
     top: -7px;
     /* 向上移动2个像素，实现视觉上的垂直居中 */
 }
+
+/* --- 核心改动：隐藏移动设备上的光标 --- */
+/* 当设备的主要输入方式是触摸屏时 (pointer: coarse) */
+@media (pointer: coarse) {
+    .cursor {
+        display: none;
+        /* 直接隐藏光标元素 */
+    }
+
+    /* 同时，恢复系统默认的光标样式，以防万一 */
+    a,
+    body {
+        cursor: auto;
+    }
+}
