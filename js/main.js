@@ -8,6 +8,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         cursor.style.top = e.clientY + 'px';
     });
 
+    // --- 光标悬停交互 ---
+    const links = document.querySelectorAll('a');
+    links.forEach(link => {
+        link.addEventListener('mouseenter', () => {
+            cursor.classList.add('a-hover-cursor');
+        });
+        link.addEventListener('mouseleave', () => {
+            cursor.classList.remove('a-hover-cursor');
+        });
+    });
+
     // --- 主题切换逻辑 ---
     const themeToggleButton = document.getElementById('theme-toggle');
     const docElement = document.documentElement;
@@ -32,37 +43,4 @@ document.addEventListener('DOMContentLoaded', (event) => {
     }, { threshold: 0.1 });
     animatedSections.forEach(section => { observer.observe(section); });
 
-    // --- 新增：获取并显示地理位置信息 ---
-    function getFlagEmoji(countryCode) {
-        // 通过国家代码生成国旗emoji
-        const codePoints = countryCode
-            .toUpperCase()
-            .split('')
-            .map(char => 127397 + char.charCodeAt());
-        return String.fromCodePoint(...codePoints);
-    }
-
-    async function fetchLocationInfo() {
-        try {
-            const response = await fetch('https://ip-api.com/json');
-            const data = await response.json();
-            
-            if (data.status === 'success') {
-                const country = data.country;
-                const countryCode = data.countryCode;
-                const flag = getFlagEmoji(countryCode);
-                
-                const locationElement = document.getElementById('location-info');
-                locationElement.innerHTML = `Connected via ${country}, ${countryCode} ${flag}`;
-            } else {
-                throw new Error('Failed to get location');
-            }
-        } catch (error) {
-            console.error('Error fetching location:', error);
-            const locationElement = document.getElementById('location-info');
-            locationElement.style.display = 'none'; // 如果获取失败，直接隐藏该行
-        }
-    }
-
-    fetchLocationInfo();
 });

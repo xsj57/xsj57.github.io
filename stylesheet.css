@@ -1,4 +1,4 @@
-/* ... 字体定义和 body/p/h2 等基础样式保持不变 ... */
+/* --- 字体定义 --- */
 @font-face {
     font-family: 'EB Garamond';
     src: url('fonts/EBGaramond-Regular.woff2') format('woff2');
@@ -34,14 +34,15 @@
     font-style: italic;
 }
 
+/* --- 基础样式 --- */
 html,
 body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body {
-    margin: 20px auto;
-    padding: 0;
+    margin: 0;
+    padding: 20px;
     font-family: 'EB Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
     font-size: 18px;
@@ -50,15 +51,13 @@ body {
     background-color: #ffffff;
 }
 
-p {
-    text-align: justify;
+.page-container {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-h2,
-.papertitle,
-.name {
-    font-family: 'EB Garamond', 'Georgia', 'Times New Roman', Times, serif;
-    font-weight: 700;
+p {
+    text-align: justify;
 }
 
 h2 {
@@ -67,6 +66,11 @@ h2 {
     border-bottom: 1px solid #ddd;
     padding-bottom: 8px;
     margin-top: 40px;
+}
+
+.papertitle,
+.name {
+    font-weight: 700;
 }
 
 .papertitle {
@@ -97,40 +101,37 @@ a:hover {
     text-decoration: underline;
 }
 
-.highlight-row {
-    background-color: #ffffd0;
-}
-
-/* --- 核心改动：为新的 Profile Header 结构设置样式 --- */
+/* --- 个人信息头部 (Profile Header) --- */
 .profile-header {
     display: flex;
     align-items: center;
-    /* 默认垂直居中对齐 */
-    padding: 2.5%;
 }
 
-.profile-left {
+.profile-avatar {
     flex: 0 0 37%;
-    /* 固定左栏宽度 */
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
 }
 
-.profile-right {
+.profile-text {
     flex: 1;
-    /* 右栏占据剩余空间 */
     padding-left: 2.5%;
+    position: relative;
+    top: -15px;
 }
 
-/* 社交媒体图标样式 */
-.social-icons {
-    margin-top: 15px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+.profile-social {
+    display: none;
 }
 
+/* 默认隐藏，只在手机端显示 */
+.profile-links {
+    margin-top: 20px;
+}
+
+/* 增加链接和简介的间距 */
+
+/* 社交图标样式 */
 .social-icons img {
     height: 24px;
     width: auto;
@@ -149,7 +150,90 @@ a:hover {
     top: -5px;
 }
 
-/* ... 自定义光标、主题切换按钮等样式保持不变 ... */
+/* --- 内容区域 --- */
+.content-section {
+    margin-top: 20px;
+}
+
+.education-entry {
+    margin-bottom: 20px;
+}
+
+.project-entry {
+    display: flex;
+    gap: 16px;
+    padding: 16px;
+}
+
+.project-image {
+    flex: 0 0 25%;
+}
+
+.project-image img {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.project-description {
+    flex: 1;
+}
+
+/* --- 页脚 --- */
+footer {
+    margin-top: 60px;
+    margin-bottom: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    color: #888;
+}
+
+footer p {
+    text-align: center;
+    margin: 5px 0;
+}
+
+/* --- 响应式布局：手机版本 (小于768px) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 0 20px;
+    }
+
+    /* 增加两侧空隙 */
+    .profile-header {
+        flex-direction: column;
+    }
+
+    .profile-avatar,
+    .profile-text {
+        flex-basis: 100%;
+        width: 100%;
+        padding: 0;
+        top: 0;
+    }
+
+    .profile-text {
+        order: 2;
+    }
+
+    /* 文字在头像下面 */
+    .profile-avatar {
+        order: 1;
+        margin-top: 20px;
+    }
+
+    .profile-social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        order: 3;
+        margin-top: 20px;
+    }
+
+    /* 社交图标在文字下面显示 */
+}
+
+/* ... 其他所有光标、主题切换、动画、深色模式样式保持不变 ... */
 a,
 body {
     cursor: none;
@@ -198,58 +282,54 @@ body {
     display: none;
 }
 
-
-/* --- 核心改动：响应式布局 - 手机版本 --- */
-@media (max-width: 768px) {
-    .profile-header {
-        flex-direction: column;
-        /* 将 Flex 容器变为垂直排列 */
-    }
-
-    .profile-left,
-    .profile-right {
-        flex-basis: 100%;
-        /* 让左右两栏都占据100%的宽度 */
-        width: 100%;
-        padding-left: 0;
-        /* 移除右栏的左边距 */
-    }
-
-    .profile-right {
-        /* 使用 order 属性重新排列元素顺序 */
-        display: flex;
-        flex-direction: column;
-        order: -1;
-        /* 将整个右栏（文字部分）移动到左栏（头像部分）的上面 */
-    }
-
-    .profile-right .name {
-        order: 1;
-    }
-
-    .profile-right p:not(.name) {
-        order: 2;
-    }
-
-    /* 将简介和链接放在名字下面 */
-
-    /* 将社交图标从头像下方，移动到所有文字的下方 */
-    .profile-left {
-        order: 3;
-    }
-
-    .social-icons {
-        margin-bottom: 20px;
-    }
-}
-
-/* ... 深色模式和动画样式保持不变 ... */
 html.dark-mode body {
     background-color: #000000;
     color: #c9d1d9;
 }
 
-/* ... (其他深色模式样式) ... */
+html.dark-mode h2,
+html.dark-mode .name {
+    color: #f0f6fc;
+    border-bottom-color: #30363d;
+}
+
+html.dark-mode .papertitle {
+    color: #acbac5;
+}
+
+html.dark-mode a {
+    color: #a755f7;
+}
+
+html.dark-mode .cursor {
+    border-color: #a755f7;
+}
+
+html.dark-mode .highlight-row {
+    background-color: #222;
+}
+
+html.dark-mode .social-icons img,
+html.dark-mode .profile-social img {
+    filter: invert(1);
+}
+
+html.dark-mode .separator {
+    color: #555;
+}
+
+html.dark-mode #theme-toggle .sun-icon {
+    display: none;
+}
+
+html.dark-mode #theme-toggle .moon-icon {
+    display: block;
+}
+
+html.dark-mode #theme-toggle svg {
+    stroke: #c9d1d9;
+}
+
 @media (pointer: coarse) {
     .cursor {
         display: none;
