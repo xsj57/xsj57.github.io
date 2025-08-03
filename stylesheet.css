@@ -45,8 +45,8 @@ body {
     padding: 0;
     font-family: 'EB Garamond', 'Times New Roman', Times, serif;
     font-weight: 500;
-    /* 核心改动 1：正文/简介字体从 17px 增加到 19px */
     font-size: 18px;
+    /* 已按要求改回 18px */
     line-height: 1.6;
     color: #333;
     background-color: #ffffff;
@@ -77,7 +77,6 @@ h2 {
 }
 
 .name {
-    /* 核心改动 2：姓名 Shijie Xu 字体从 34px 增加到 36px */
     font-size: 36px;
 }
 
@@ -107,6 +106,11 @@ a:hover {
 
 .highlight-row {
     background-color: #ffffd0;
+}
+
+/* 核心改动 1：新增 profile-row 样式来强制垂直对齐 */
+.profile-row>td {
+    vertical-align: middle;
 }
 
 /* 自定义光标样式 */
@@ -181,7 +185,8 @@ body {
     font-size: 24px;
     font-weight: 100;
     position: relative;
-    top: -2px;
+    top: -5px;
+    /* 核心改动 2：额外向上移动3px (从-2px到-5px) */
 }
 
 /* 深色模式 (Dark Mode) 样式 */
@@ -244,18 +249,14 @@ html.dark-mode #theme-toggle svg {
     }
 }
 
-/* --- 滚动加载动画样式 --- */
+/* 滚动加载动画样式 */
 .section-to-animate {
     opacity: 0;
-    /* 默认状态：透明 */
     transform: translateY(20px);
-    /* 默认状态：向下偏移20px */
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .section-is-visible {
     opacity: 1;
-    /* 可见状态：完全不透明 */
     transform: translateY(0);
-    /* 可见状态：回到原位 */
 }
