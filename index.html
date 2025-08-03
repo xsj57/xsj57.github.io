@@ -44,126 +44,84 @@
     <!-- 自定义光标的元素 -->
     <div class="cursor"></div>
 
-    <!-- 核心改动：页面主容器从 <table> 换成了 <div> -->
+    <!-- 页面主容器 -->
     <div class="page-container">
-
-        <!-- 顶部: 个人信息 -->
-        <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-                <tr class="profile-row" style="padding:0px">
-                    <!-- 左栏: 头像和社交图标 -->
-                    <td class="profile-avatar-column"
-                        style="padding:2.5%;width:37%;max-width:37%;vertical-align: middle;">
-                        <div class="avatar-container">
-                            <img style="width: 100%; max-width: 200px; border-radius: 0;" alt="profile photo"
-                                src="media/avatar.jpg">
-                            <div class="social-icons">
-                                <a href="https://www.facebook.com/EricXussj" target="_blank"><img
-                                        src="media/facebook.svg" alt="Facebook Icon"></a>
-                                <span class="separator">|</span>
-                                <a href="https://www.instagram.com/eric_xussj/" target="_blank"><img
-                                        src="media/instagram.svg" alt="Instagram Icon"></a>
-                                <span class="separator">|</span>
-                                <a href="https://untappd.com/user/JieXuS" target="_blank"><img src="media/untappd.svg"
-                                        alt="Untappd Icon"></a>
-                            </div>
-                        </div>
-                    </td>
-                    <!-- 右栏: 个人简介和链接 -->
-                    <td class="profile-text-column" style="padding:2.5%;width:63%;">
-                        <p class="name" style="text-align: center;">Shijie Xu</p>
-                        <p>
-                            I am a third-year master's student pursuing a Master's degree in Forestry Engineering at
-                            Fujian Agriculture and Forestry University. I am also a member of the Vegetable Oil-based 3D
-                            Printing team led by Prof. Qiu Renhui. The research we are currently conducting includes
-                            vegetable oil-based 3D printing inks and accompanying light-cured 3D printing and Direct Ink
-                            Writing (
-                            <a href="#"><span class="bold-text">DIW</span></a>
-                            ) 3D printing. My research interests include
-                            <a href="#"><span class="bold-text">3D Printing Ink</span></a>,
-                            <a href="#"><span class="bold-text">3D Printer</span></a>, and
-                            <a href="#"><span class="bold-text">AI-assisted 3D Printing</span></a>.
-                        </p>
-                        <p style="text-align:center" class="profile-links">
-                            <a href="mailto:mail@xsj57.cn"><span class="italic-text">Email</span></a>&nbsp;/&nbsp;
-                            <a href="data/cv.pdf">CV</a> &nbsp;/&nbsp;
-                            <a href="your_google_scholar_link">Google Scholar</a> &nbsp;/&nbsp;
-                            <a href="https://github.com/xsj57/">Github</a>
-                        </p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <!-- 核心改动：用新的 <section> 替换了旧的 <table> -->
+        <section class="profile-header">
+            <div class="profile-left">
+                <img class="profile-avatar" alt="profile photo" src="media/avatar.jpg">
+            </div>
+            <div class="profile-right">
+                <p class="name">Shijie Xu</p>
+                <p>
+                    I am a third-year master's student pursuing a Master's degree in Forestry Engineering at Fujian
+                    Agriculture and Forestry University. I am also a member of the Vegetable Oil-based 3D Printing team
+                    led by Prof. Qiu Renhui. The research we are currently conducting includes vegetable oil-based 3D
+                    printing inks and accompanying light-cured 3D printing and Direct Ink Writing (
+                    <a href="#"><span class="bold-text">DIW</span></a>
+                    ) 3D printing. My research interests include
+                    <a href="#"><span class="bold-text">3D Printing Ink</span></a>,
+                    <a href="#"><span class="bold-text">3D Printer</span></a>, and
+                    <a href="#"><span class="bold-text">AI-assisted 3D Printing</span></a>.
+                </p>
+                <p class="profile-links">
+                    <a href="mailto:mail@xsj57.cn"><span class="italic-text">Email</span></a>&nbsp;/&nbsp;
+                    <a href="data/cv.pdf">CV</a> &nbsp;/&nbsp;
+                    <a href="your_google_scholar_link">Google Scholar</a> &nbsp;/&nbsp;
+                    <a href="https://github.com/xsj57/">Github</a>
+                </p>
+            </div>
+            <div class="profile-social">
+                <a href="https://www.facebook.com/EricXussj" target="_blank"><img src="media/facebook.svg"
+                        alt="Facebook Icon"></a>
+                <span class="separator">|</span>
+                <a href="https://www.instagram.com/eric_xussj/" target="_blank"><img src="media/instagram.svg"
+                        alt="Instagram Icon"></a>
+                <span class="separator">|</span>
+                <a href="https://untappd.com/user/JieXuS" target="_blank"><img src="media/untappd.svg"
+                        alt="Untappd Icon"></a>
+            </div>
+        </section>
 
         <!-- 教育经历 -->
-        <table class="section-to-animate"
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-                <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
-                        <h2>Education</h2>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table
-            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-                <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
-                        <span class="papertitle">Fujian Agriculture and Forestry University</span><br>
-                        MEng in Forestry Engineering<br>
-                        <span class="italic-text">Sep 2023 - Present</span>
-                        <p>You can write a brief description about your study or research focus here.</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
-                        <span class="papertitle">Changzhou Institute of Technology</span><br>
-                        B.S. in Civil Engineering<br>
-                        <span class="italic-text">Sep 2018 - Jun 2022</span>
-                        <p>Graduated with honors.</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <section class="content-section section-to-animate">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <span class="papertitle">Fujian Agriculture and Forestry University</span><br>
+                MEng in Forestry Engineering<br>
+                <span class="italic-text">Sep 2023 - Present</span>
+                <p>You can write a brief description about your study or research focus here.</p>
+            </div>
+            <div class="education-entry">
+                <span class="papertitle">Changzhou Institute of Technology</span><br>
+                B.S. in Civil Engineering<br>
+                <span class="italic-text">Sep 2018 - Jun 2022</span>
+                <p>Graduated with honors.</p>
+            </div>
+        </section>
 
         <!-- 研究与项目 -->
-        <table class="section-to-animate"
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-                <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
-                        <h2>Research & Projects</h2>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
-        <table
-            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-            <tbody>
-                <tr class="highlight-row">
-                    <td style="padding:16px;width:25%;vertical-align:middle">
-                        <img src="media/project1.jpg" alt="project image" style="width:100%; border:1px solid #ddd;">
-                    </td>
-                    <td style="padding:16px;width:75%;vertical-align:middle">
-                        <a href="your_project_link"><span class="papertitle">Project Title One (e.g., A Cool AI
-                                Project)</span></a><br>
-                        Author One, Author Two, <strong>Shijie Xu</strong><br>
-                        <em>Conference or Journal Name, <span class="italic-text">2025</span></em><br>
-                        <a href="#">[Project Page]</a> / <a href="#">[Code]</a> / <a href="#">[Paper]</a>
-                        <p>A short description of this project, explaining its purpose and key contributions.</p>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+        <section class="content-section section-to-animate">
+            <h2>Research & Projects</h2>
+            <div class="project-entry highlight-row">
+                <div class="project-image">
+                    <img src="media/project1.jpg" alt="project image">
+                </div>
+                <div class="project-description">
+                    <a href="your_project_link"><span class="papertitle">Project Title One (e.g., A Cool AI
+                            Project)</span></a><br>
+                    Author One, Author Two, <strong>Shijie Xu</strong><br>
+                    <em>Conference or Journal Name, <span class="italic-text">2025</span></em><br>
+                    <a href="#">[Project Page]</a> / <a href="#">[Code]</a> / <a href="#">[Paper]</a>
+                    <p>A short description of this project, explaining its purpose and key contributions.</p>
+                </div>
+            </div>
+        </section>
 
         <!-- 页脚 -->
         <footer>
             <p class="copyright">© 2025 Eric Xu. All rights reserved.</p>
         </footer>
-
     </div>
 
     <!-- 引入 JavaScript 文件 -->
