@@ -1,2 +1,2 @@
-# xsj57.github.io
+# www.xsj57.us.kg
 My Own Personal Page
