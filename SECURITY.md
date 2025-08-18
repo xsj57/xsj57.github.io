@@ -1,63 +1,61 @@
-# 安全策略 | Security Policy
+# Security Policy | 安全策略
 
-## 🛡️ 支持的版本
+## 🛡️ Supported Versions
 
-我们致力于保护用户的安全。以下版本会收到安全更新：
+We are committed to protecting user security. The following versions will receive security updates:
 
-| 版本 | 支持状态 |
+| Version | Support Status |
 | ---- | -------- |
-| 1.0.x | ✅ 支持 |
-| < 1.0 | ❌ 不支持 |
+| 1.0.x | ✅ Supported |
+| < 1.0 | ❌ Not Supported |
 
-## 🚨 报告安全问题
+## 🚨 Reporting Security Issues
 
-如果你发现了一个安全漏洞，请不要公开报告。相反，请通过以下方式私下报告：
+If you discover a security vulnerability, please do not report it publicly. Instead, please report it privately through the following methods:
 
-### 方式1：GitHub Security Advisories
-1. 访问 [Security Advisories](https://github.com/xsj57/xsj57.github.io/security/advisories)
-2. 点击 "Report a vulnerability"
-3. 填写详细的安全问题描述
+### GitHub Security Advisories
+1. Visit [Security Advisories](https://github.com/xsj57/xsj57.github.io/security/advisories)
+2. Click "Report a vulnerability"
+3. Fill in detailed security issue description
 
-### 方式2：邮件报告
-发送邮件到：**mail@xsj57.us.kg**
 
-请在邮件主题中包含 `[SECURITY]` 前缀。
+Please include `[SECURITY]` prefix in the email subject.
 
-## 📋 报告要求
+## 📋 Report Requirements
 
-为了帮助我们更好地理解和解决问题，请在你的报告中包含：
+To help us better understand and resolve issues, please include in your report:
 
-- **漏洞类型**：XSS、CSRF、信息泄露等
-- **影响范围**：哪些功能受到影响
-- **重现步骤**：详细的漏洞重现步骤
-- **预期行为**：正常情况下应该发生什么
-- **实际行为**：漏洞触发时发生了什么
-- **环境信息**：浏览器版本、操作系统等
-- **时间戳**：发现漏洞的时间
+- **Vulnerability Type**: XSS, CSRF, information disclosure, etc.
+- **Impact Scope**: Which features are affected
+- **Reproduction Steps**: Detailed vulnerability reproduction steps
+- **Expected Behavior**: What should happen normally
+- **Actual Behavior**: What happens when the vulnerability is triggered
+- **Environment Information**: Browser version, operating system, etc.
+- **Timestamp**: Time when the vulnerability was discovered
 
-## ⏱️ 响应时间
+## ⏱️ Response Time
 
-我们承诺在收到安全报告后的时间框架内做出响应：
+We commit to respond within the following timeframes after receiving security reports:
 
-- **初步确认**：24小时内
-- **详细评估**：3个工作日内
-- **修复计划**：7个工作日内
-- **修复发布**：根据严重程度确定
+- **Initial Confirmation**: Within 24 hours
+- **Detailed Assessment**: Within 3 business days
+- **Fix Plan**: Within 7 business days
+- **Fix Release**: Determined by severity level
 
-## 🔒 安全最佳实践
+## 🔒 Security Best Practices
 
-为了保持项目安全，我们建议：
+To maintain project security, we recommend:
 
-- 定期更新依赖包
-- 使用HTTPS协议
-- 实施内容安全策略(CSP)
-- 定期进行安全审计
-- 遵循OWASP安全指南
+- Regularly update dependencies
+- Use HTTPS protocol
+- Implement Content Security Policy (CSP)
+- Conduct regular security audits
+- Follow OWASP security guidelines
 
-## 🙏 致谢
+## 🙏 Acknowledgments
 
-感谢所有负责任地报告安全问题的研究人员和用户！
+Thank you to all researchers and users who responsibly report security issues!
 
 ---
 
-**注意**：请不要在公开的Issue中讨论安全问题，这可能会使其他用户面临风险。 
+**Note**: Please do not discuss security issues in public Issues, as this may put other users at risk. 

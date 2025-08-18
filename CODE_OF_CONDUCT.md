@@ -1,49 +1,45 @@
-# 行为准则 | Code of Conduct
+# Code of Conduct
 
-## 🎯 我们的承诺
+## 🎯 Our Pledge
 
-为了营造一个开放和友好的环境，我们作为贡献者和维护者承诺，无论年龄、体型、身体残疾、民族、性别认同和表达、经验水平、教育、社会经济地位、国籍、个人外表、种族、宗教或性取向和认同如何，都让我们的项目和社区成为对每个人都是无骚扰的体验。
+To create an open and welcoming environment, we as contributors and maintainers pledge to make our project and community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-## 🌟 我们的标准
+## 🌟 Our Standards
 
-有助于创造积极环境的行为示例包括：
+Examples of behavior that contribute to creating a positive environment include:
 
-- 使用友好和包容的语言
-- 尊重不同的观点和经验
-- 优雅地接受建设性批评
-- 关注对社区最有利的事情
-- 对其他社区成员表现出同理心
+- Using welcoming and inclusive language
+- Respecting differing viewpoints and experiences
+- Gracefully accepting constructive criticism
+- Focusing on what is best for the community
+- Showing empathy towards other community members
 
-不可接受的行为包括：
+Examples of unacceptable behavior include:
 
-- 使用性暗示的语言或图像，或不受欢迎的性关注或挑逗
-- 挑衅、侮辱/贬损的评论，以及人身或政治攻击
-- 公开或私下骚扰
-- 未经明确许可发布他人的私人信息，如实际或电子地址
-- 在专业环境中可能被认为不适当的其他行为
+- The use of sexualized language or imagery, or unwelcome sexual attention or advances
+- Trolling, insulting/derogatory comments, and personal or political attacks
+- Public or private harassment
+- Publishing others' private information, such as physical or electronic addresses, without explicit permission
+- Other conduct which could reasonably be considered inappropriate in a professional setting
 
-## 🚫 执行责任
+## 🚫 Enforcement Responsibilities
 
-项目维护者有责任和义务删除、编辑或拒绝不符合本行为准则的评论、提交、代码、wiki编辑、问题和其他贡献，并有权暂时或永久禁止任何贡献者进行他们认为不适当、威胁、冒犯或有害的其他行为。
+Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
 
-## 📍 适用范围
+Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
 
-当个人代表项目或其社区时，本行为准则适用于项目空间和公共空间。代表项目或社区的示例包括使用官方项目电子邮件地址、通过官方社交媒体账户发帖，或在在线或离线活动中担任指定代表。项目的表示可以由项目维护者进一步定义和澄清。
+## 📍 Scope
 
-## ⚖️ 执行
+This Code of Conduct applies within all project spaces, and it also applies when an individual is representing the project or its community in public spaces. Examples of representing a project or community include using an official project e-mail address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
 
-可以通过 [mail@xsj57.us.kg](mailto:mail@xsj57.us.kg) 向项目团队报告辱骂、骚扰或其他不可接受的行为。所有投诉都将被审查和调查，并将导致被认为必要和适当的回应。项目团队有义务对举报事件的举报人保密。具体执行政策的更多细节可能会单独发布。
+## 📚 Attribution
 
-不真诚地遵循或执行行为准则的项目维护者可能会被项目领导层的其他成员临时或永久地剥夺其身份。
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html), version 1.4, available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html.
 
-## 📚 归属
+## 📞 Questions
 
-本行为准则改编自 [贡献者公约](https://www.contributor-covenant.org/version/1/4/code-of-conduct.html) 1.4版，可在 https://www.contributor-covenant.org/version/1/4/code-of-conduct.html 获得。
-
-## 📞 问题
-
-如果你对本行为准则有任何疑问，请发送邮件到 [mail@xsj57.us.kg](mailto:mail@xsj57.us.kg)。
+If you have questions about this Code of Conduct, please send an email to [mail@xsj57.us.kg](mailto:mail@xsj57.us.kg).
 
 ---
 
-**让我们一起创造一个友好、包容和富有成效的社区环境！** 🌈 
+**Let's work together to create a friendly, inclusive, and productive community environment!** 🌈 

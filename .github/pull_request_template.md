@@ -1,55 +1,55 @@
-## 📝 描述
+## 📝 Description
 
-请包含对更改的简要描述以及相关动机。列出此PR解决的任何依赖项。
+Please include a brief description of the changes and the motivation. List any dependencies that this PR resolves.
 
-修复 #(issue)
+Fixes #(issue)
 
-## 🔄 更改类型
+## 🔄 Type of Change
 
-请删除不相关的选项：
+Please delete options that are not relevant:
 
-- [ ] Bug修复（不会破坏现有功能的更改）
-- [ ] 新功能（添加功能的更改）
-- [ ] 破坏性更改（修复或功能会导致现有功能无法按预期工作的更改）
-- [ ] 文档更新
+- [ ] Bug fix (change that fixes an issue without breaking existing functionality)
+- [ ] New feature (change that adds functionality)
+- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] Documentation update
 
-## 🧪 测试
+## 🧪 Testing
 
-请描述你为测试更改而执行的测试。提供说明以便我们可以重现它们。请列出任何相关的测试详细信息。
+Please describe the tests you performed to test your changes. Provide instructions so we can reproduce them. Please list any relevant test details.
 
-- [ ] 测试A
-- [ ] 测试B
+- [ ] Test A
+- [ ] Test B
 
-## 📱 兼容性
+## 📱 Compatibility
 
-- [ ] 我的更改不会产生警告
-- [ ] 我的更改在以下浏览器中工作：
+- [ ] My changes do not generate warnings
+- [ ] My changes work in the following browsers:
   - [ ] Chrome
   - [ ] Firefox
   - [ ] Safari
   - [ ] Edge
-- [ ] 我的更改在移动设备上工作正常
+- [ ] My changes work properly on mobile devices
 
-## 📋 检查清单
+## 📋 Checklist
 
-在提交之前，请确保你已经：
+Before submitting, please ensure you have:
 
-- [ ] 我的代码遵循此项目的样式指南
-- [ ] 我已经自我审查了我的代码
-- [ ] 我已经注释了我的代码，特别是在难以理解的地方
-- [ ] 我进行了相应的更改到文档
-- [ ] 我的更改不会产生新的警告
-- [ ] 我添加了测试来证明我的修复是有效的或我的新功能工作正常
-- [ ] 所有新的和现有的测试都通过了
+- [ ] My code follows the style guidelines of this project
+- [ ] I have self-reviewed my code
+- [ ] I have commented my code, particularly in hard-to-understand areas
+- [ ] I have made corresponding changes to the documentation
+- [ ] My changes do not generate new warnings
+- [ ] I have added tests that prove my fix is effective or that my new feature works properly
+- [ ] All new and existing tests pass
 
-## 📸 截图
+## 📸 Screenshots
 
-如果适用，添加截图以帮助解释你的更改。
+If applicable, add screenshots to help explain your changes.
 
-## 📝 额外信息
+## 📝 Additional Information
 
-在此处添加关于PR的任何其他上下文。
+Add any other context about the PR here.
 
 ---
 
-**感谢你的贡献！** 🎉 
+**Thank you for your contribution!** 🎉 

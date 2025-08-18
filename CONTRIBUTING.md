@@ -1,85 +1,84 @@
-# 贡献指南 | Contributing Guide
+# Contributing Guide | 贡献指南
 
-感谢你考虑为我的个人网页项目做出贡献！🎉
+Thank you for considering contributing to my personal website project! 🎉
 
-## 🤝 如何贡献
+## 🤝 How to Contribute
 
-### 报告Bug
-如果你发现了一个bug，请创建一个Issue并包含以下信息：
-- Bug的详细描述
-- 重现步骤
-- 预期行为
-- 实际行为
-- 浏览器和操作系统信息
-- 截图（如果适用）
+### Report Bugs
+If you find a bug, please create an Issue with the following information:
+- Detailed description of the bug
+- Steps to reproduce
+- Expected behavior
+- Actual behavior
+- Browser and operating system information
+- Screenshots (if applicable)
 
-### 功能请求
-如果你有新的功能想法，请创建一个Issue并描述：
-- 功能的具体用途
-- 为什么需要这个功能
-- 你希望如何实现
+### Feature Requests
+If you have new feature ideas, please create an Issue describing:
+- Specific purpose of the feature
+- Why this feature is needed
+- How you hope to implement it
 
-### 代码贡献
-如果你想贡献代码：
+### Code Contributions
+If you want to contribute code:
 
-1. Fork这个仓库
-2. 创建一个新的分支：`git checkout -b feature/your-feature-name`
-3. 提交你的更改：`git commit -m 'Add some feature'`
-4. 推送到分支：`git push origin feature/your-feature-name`
-5. 创建一个Pull Request
+1. Fork this repository
+2. Create a new branch: `git checkout -b feature/your-feature-name`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin feature/your-feature-name`
+5. Create a Pull Request
 
-## 📋 开发规范
+## 📋 Development Standards
 
-### 代码风格
-- 使用2个空格缩进
-- 遵循现有的代码风格
-- 添加适当的注释
-- 确保代码在主要浏览器中正常工作
+### Code Style
+- Use 2-space indentation
+- Follow existing code style
+- Add appropriate comments
+- Ensure code works in major browsers
 
-### 提交信息
-使用清晰的提交信息：
-- `feat:` 新功能
-- `fix:` Bug修复
-- `docs:` 文档更新
-- `style:` 代码格式调整
-- `refactor:` 代码重构
-- `test:` 测试相关
-- `chore:` 构建过程或辅助工具的变动
+### Commit Messages
+Use clear commit messages:
+- `feat:` New feature
+- `fix:` Bug fix
+- `docs:` Documentation update
+- `style:` Code formatting adjustment
+- `refactor:` Code refactoring
+- `test:` Testing related
+- `chore:` Build process or auxiliary tool changes
 
-## 🚀 本地开发设置
+## 🚀 Local Development Setup
 
-1. 克隆你的fork：
+1. Clone your fork:
 ```bash
-git clone https://github.com/你的用户名/xsj57.github.io.git
+git clone https://github.com/your-username/xsj57.github.io.git
 cd xsj57.github.io
 ```
 
-2. 添加原始仓库作为上游：
+2. Add the original repository as upstream:
 ```bash
 git remote add upstream https://github.com/xsj57/xsj57.github.io.git
 ```
 
-3. 在浏览器中打开`index.html`进行测试
+3. Open `index.html` in your browser for testing
 
-## 📝 测试
+## 📝 Testing
 
-在提交Pull Request之前，请确保：
-- 网页在不同浏览器中正常显示
-- 响应式设计在移动设备上工作正常
-- 深色/浅色主题切换功能正常
-- 所有链接都指向正确的页面
+Before submitting a Pull Request, please ensure:
+- The webpage displays normally in different browsers
+- Responsive design works properly on mobile devices
+- Dark/light theme switching functions normally
+- All links point to correct pages
 
-## 📞 联系我
+## 📞 Contact Me
 
-如果你有任何问题或需要帮助，请：
-- 创建一个Issue
-- 发送邮件到：mail@xsj57.us.kg
-- 访问我的个人网站：www.xsj57.us.kg
+If you have any questions or need help, please:
+- Create an Issue
+- Visit my personal website: www.xsj57.us.kg
 
-## 🙏 致谢
+## 🙏 Acknowledgments
 
-感谢所有为这个项目做出贡献的人！
+Thank you to everyone who has contributed to this project!
 
 ---
 
-再次感谢你的贡献！🌟 
+Thank you again for your contribution! 🌟 

@@ -3,9 +3,6 @@ contact_links:
   - name: GitHub Community Support
     url: https://github.com/orgs/community/discussions
     about: Please ask and answer questions here.
-  - name: 个人网站
+  - name: Personal Website
     url: https://www.xsj57.us.kg
-    about: 访问我的个人网站获取更多信息。
-  - name: 邮件联系
-    url: mailto:mail@xsj57.us.kg
-    about: 直接发送邮件给我。 
+    about: Visit my personal website for more information.

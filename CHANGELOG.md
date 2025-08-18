@@ -1,67 +1,67 @@
-# 更新日志 | Changelog
+# Changelog | 更新日志
 
-本项目遵循 [语义化版本](https://semver.org/lang/zh-CN/) 规范。
+This project follows [Semantic Versioning](https://semver.org/lang/zh-CN/) specifications.
 
-## [未发布] - 2025-01-XX
+## [Unreleased] - 2025-01-XX
 
-### 新增
-- 深色/浅色主题切换功能
-- 响应式设计支持
-- 自定义光标效果
-- 返回顶部按钮
-- 打字机效果显示姓名
+### Added
+- Dark/light theme switching functionality
+- Responsive design support
+- Custom cursor effects
+- Back to top button
+- Typewriter effect for name display
 
-### 改进
-- 优化移动端显示效果
-- 改进页面加载性能
-- 增强用户体验
+### Improved
+- Optimized mobile display effects
+- Improved page loading performance
+- Enhanced user experience
 
-### 修复
-- 修复深色模式加载时的页面闪烁问题
-- 优化主题切换的流畅性
+### Fixed
+- Fixed page flickering issue when loading dark mode
+- Optimized theme switching smoothness
 
 ## [1.0.0] - 2025-01-XX
 
-### 新增
-- 个人学术网页基础框架
-- 个人信息展示区域
-- 教育经历部分
-- 研究项目展示
-- 项目作品展示
-- 社交媒体链接
-- 多设备favicon支持
+### Added
+- Personal academic website basic framework
+- Personal information display area
+- Education experience section
+- Research project showcase
+- Project work showcase
+- Social media links
+- Multi-device favicon support
 
-### 技术特性
-- HTML5语义化标签
-- CSS3现代化样式
-- JavaScript交互功能
-- 响应式布局设计
-- 跨浏览器兼容性
+### Technical Features
+- HTML5 semantic tags
+- CSS3 modern styling
+- JavaScript interactive functionality
+- Responsive layout design
+- Cross-browser compatibility
 
 ---
 
-## 版本说明
+## Version Description
 
-- **主要版本**：包含不兼容的API修改
-- **次要版本**：向下兼容的功能性新增
-- **修订版本**：向下兼容的问题修正
+- **Major Version**: Contains incompatible API changes
+- **Minor Version**: Backward-compatible functional additions
+- **Patch Version**: Backward-compatible problem fixes
 
-## 贡献
+## Contributing
 
-如果你想要添加新的更新记录，请遵循以下格式：
+If you want to add new changelog entries, please follow this format:
 
 ```markdown
-## [版本号] - YYYY-MM-DD
+## [Version] - YYYY-MM-DD
 
-### 新增
-- 新功能描述
+### Added
+- New feature description
 
-### 改进
-- 功能改进描述
+### Improved
+- Feature improvement description
 
-### 修复
-- Bug修复描述
+### Fixed
+- Bug fix description
 
-### 移除
-- 移除功能描述
+### Removed
+- Removed feature description
 ``` 

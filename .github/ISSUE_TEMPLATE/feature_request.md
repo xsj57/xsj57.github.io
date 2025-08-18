@@ -1,53 +1,53 @@
 ---
-name: 💡 功能请求
-about: 为这个项目提出一个想法
+name: 💡 Feature Request
+about: Suggest an idea for this project
 title: '[FEATURE] '
 labels: ['enhancement', 'triage']
 assignees: ['xsj57']
 ---
 
-## 🎯 你的功能请求是否与某个问题相关？
+## 🎯 Is your feature request related to a problem?
 
-请描述。例如：当我在使用[某个功能]时，我总是感到沮丧，因为...
+Please describe. For example: When I'm using [some feature], I always feel frustrated because...
 
-## 💡 描述你想要的解决方案
+## 💡 Describe the solution you'd like
 
-清晰简洁地描述你想要发生的事情。
+Clearly and concisely describe what you want to happen.
 
-## 🔄 描述你考虑过的替代方案
+## 🔄 Describe alternatives you've considered
 
-清晰简洁地描述你考虑过的任何替代解决方案或功能。
+Clearly and concisely describe any alternative solutions or features you've considered.
 
-## 📱 额外信息
+## 📱 Additional Information
 
-在此处添加关于功能请求的任何其他上下文或截图。
+Add any other context or screenshots about the feature request here.
 
-## 🎨 设计建议
+## 🎨 Design Suggestions
 
-如果你有关于UI/UX设计的建议，请在这里描述：
+If you have suggestions for UI/UX design, please describe them here:
 
-## 🔧 技术考虑
+## 🔧 Technical Considerations
 
-如果你有技术实现方面的想法，请在这里描述：
+If you have ideas about technical implementation, please describe them here:
 
-## 📋 检查清单
+## 📋 Checklist
 
-在提交之前，请确保你已经：
+Before submitting, please ensure you have:
 
-- [ ] 搜索了现有的Issue
-- [ ] 检查了最新的版本
-- [ ] 提供了清晰的功能描述
-- [ ] 考虑了替代方案
-- [ ] 使用了描述性的标题
+- [ ] Searched existing issues
+- [ ] Checked the latest version
+- [ ] Provided a clear feature description
+- [ ] Considered alternatives
+- [ ] Used a descriptive title
 
-## 🚀 优先级
+## 🚀 Priority
 
-请选择这个功能请求的优先级：
-- [ ] 低 - 锦上添花
-- [ ] 中 - 有一定价值
-- [ ] 高 - 重要功能
-- [ ] 紧急 - 核心功能
+Please select the priority of this feature request:
+- [ ] Low - Nice to have
+- [ ] Medium - Some value
+- [ ] High - Important feature
+- [ ] Urgent - Core functionality
 
 ---
 
-**感谢你的建议！** 🎉 
+**Thank you for your suggestion!** 🎉 

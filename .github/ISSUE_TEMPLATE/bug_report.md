@@ -1,61 +1,61 @@
 ---
-name: 🐛 Bug报告
-about: 创建一个Bug报告来帮助我们改进
+name: 🐛 Bug Report
+about: Create a bug report to help us improve
 title: '[BUG] '
 labels: ['bug', 'triage']
 assignees: ['xsj57']
 ---
 
-## 🐛 Bug描述
+## 🐛 Bug Description
 
-请清晰简洁地描述这个Bug是什么。
+Please clearly and concisely describe what the bug is.
 
-## 🔄 重现步骤
+## 🔄 Steps to Reproduce
 
-重现该行为的步骤：
-1. 前往 '...'
-2. 点击 '....'
-3. 滚动到 '....'
-4. 看到错误
+Steps to reproduce the behavior:
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
 
-## ✅ 预期行为
+## ✅ Expected Behavior
 
-清晰简洁地描述你期望发生的事情。
+Clearly and concisely describe what you expected to happen.
 
-## ❌ 实际行为
+## ❌ Actual Behavior
 
-清晰简洁地描述实际发生的事情。
+Clearly and concisely describe what actually happened.
 
-## 📱 环境信息
+## 📱 Environment Information
 
-**设备信息：**
-- 操作系统: [例如 iOS, Windows 10, macOS]
-- 浏览器: [例如 Chrome, Safari, Firefox]
-- 浏览器版本: [例如 22]
-- 设备类型: [例如 桌面, 手机, 平板]
+**Device Information:**
+- Operating System: [e.g. iOS, Windows 10, macOS]
+- Browser: [e.g. Chrome, Safari, Firefox]
+- Browser Version: [e.g. 22]
+- Device Type: [e.g. Desktop, Mobile, Tablet]
 
-**屏幕尺寸：**
-- 宽度: [例如 1920px]
-- 高度: [例如 1080px]
+**Screen Dimensions:**
+- Width: [e.g. 1920px]
+- Height: [e.g. 1080px]
 
-## 📸 截图
+## 📸 Screenshots
 
-如果适用，添加截图以帮助解释你的问题。
+If applicable, add screenshots to help explain your problem.
 
-## 📝 额外信息
+## 📝 Additional Information
 
-在此处添加关于该问题的任何其他上下文。
+Add any other context about the problem here.
 
-## 🔍 检查清单
+## 🔍 Checklist
 
-在提交之前，请确保你已经：
+Before submitting, please ensure you have:
 
-- [ ] 搜索了现有的Issue
-- [ ] 检查了最新的版本
-- [ ] 在多个浏览器中测试了问题
-- [ ] 提供了足够的环境信息
-- [ ] 使用了描述性的标题
+- [ ] Searched existing issues
+- [ ] Checked the latest version
+- [ ] Tested the problem in multiple browsers
+- [ ] Provided sufficient environment information
+- [ ] Used a descriptive title
 
 ---
 
-**感谢你的报告！** 🎉 
+**Thank you for your report!** 🎉 

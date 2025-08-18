@@ -58,5 +58,5 @@ jobs:
             issue_number: context.issue.number,
             owner: context.repo.owner,
             repo: context.repo.repo,
-            body: '🚀 部署检查完成！如果所有检查都通过，你的更改将被部署到GitHub Pages。'
+            body: '🚀 Deployment check completed! If all checks pass, your changes will be deployed to GitHub Pages.'
           }) 
