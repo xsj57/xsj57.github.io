@@ -1,6 +1,6 @@
 # My Personal Website
 
-🌐 **Live Demo**: [www.xsj57.us.kg](https://www.xsj57.us.kg)
+🌐 **Website**: [www.xsj57.us.kg](https://www.xsj57.us.kg)
 
 ## 📖 Project Description
 
