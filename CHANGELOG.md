@@ -1,4 +1,4 @@
-# Changelog | 更新日志
+# Changelog
 
 This project follows [Semantic Versioning](https://semver.org/lang/zh-CN/) specifications.
 

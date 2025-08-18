@@ -1,4 +1,4 @@
-# Contributing Guide | 贡献指南
+# Contributing Guide
 
 Thank you for considering contributing to my personal website project! 🎉
 
