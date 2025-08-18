@@ -1,0 +1,62 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        
+    - name: Install dependencies
+      run: |
+        npm install -g html-validate
+        npm install -g css-validator
+        
+    - name: Validate HTML
+      run: |
+        html-validate index.html diw_code.html
+        
+    - name: Validate CSS
+      run: |
+        css-validator stylesheet.css
+        
+    - name: Check file structure
+      run: |
+        echo "Checking required files..."
+        test -f index.html && echo "✓ index.html exists"
+        test -f stylesheet.css && echo "✓ stylesheet.css exists"
+        test -f js/main.js && echo "✓ js/main.js exists"
+        test -f CNAME && echo "✓ CNAME exists"
+        test -f README.md && echo "✓ README.md exists"
+        
+    - name: Deploy to GitHub Pages
+      if: github.ref == 'refs/heads/main'
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: .
+        cname: www.xsj57.us.kg
+        
+    - name: Comment PR
+      if: github.event_name == 'pull_request'
+      uses: actions/github-script@v7
+      with:
+        script: |
+          github.rest.issues.createComment({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            body: '🚀 部署检查完成！如果所有检查都通过，你的更改将被部署到GitHub Pages。'
+          }) 
