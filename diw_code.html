@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
     <link rel="icon" type="image/png" href="media/favicon.png">
 
-    <!-- 防止深色模式加载时页面闪烁 -->
+    <!-- Prevent page flicker when loading dark mode -->
     <script>
         (function () {
             const theme = localStorage.getItem('theme');
@@ -21,7 +21,7 @@
 </head>
 
 <body>
-    <!-- 主题切换按钮 -->
+    <!-- Theme toggle button -->
     <button id="theme-toggle" title="Toggle dark/light mode">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -41,7 +41,7 @@
         </svg>
     </button>
 
-    <!-- 返回顶部按钮 -->
+    <!-- Back to top button -->
     <button id="back-to-top" title="Back to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -50,18 +50,18 @@
         </svg>
     </button>
 
-    <!-- 自定义光标的元素 -->
+    <!-- Custom cursor element -->
     <div class="cursor"></div>
 
-    <!-- 页面主容器 -->
+    <!-- Main page container -->
     <div class="page-container">
 
-        <!-- 返回主页链接 -->
+        <!-- Back to home link -->
         <div style="margin-bottom: 30px;">
             <a href="index.html" style="font-size: 16px;">← Back to Home</a>
         </div>
 
-        <!-- 项目标题 -->
+        <!-- Project title -->
         <table
             style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
             <tbody>
@@ -75,9 +75,9 @@
             </tbody>
         </table>
 
-        <!-- 项目详细内容 -->
+        <!-- Project detailed content -->
         <div class="project-wrapper">
-            <!-- 目录 -->
+            <!-- Table of contents -->
             <div class="project-content">
                 <h2>Table of Contents</h2>
                 <div class="table-of-contents">
@@ -88,7 +88,7 @@
                 </div>
             </div>
 
-            <!-- 第一个副标题 -->
+            <!-- First subsection -->
             <div class="project-content">
                 <h3 id="section1">1. pyramid</h3>
                 <p>
@@ -102,14 +102,14 @@
                     parameter adjustment mechanisms that work together to ensure consistent print quality.
                 </p>
 
-                <!-- GitHub Gist 嵌入 - pyramid.py -->
+                <!-- GitHub Gist embed - pyramid.py -->
                 <h4>Implementation Code:</h4>
                 <div class="gist-container">
                     <script src="https://gist.github.com/xsj57/96bc504c6dde9fbd37ea8fdb89009da2.js"></script>
                 </div>
             </div>
 
-            <!-- 第二个副标题 -->
+            <!-- Second subsection -->
             <div class="project-content">
                 <h3 id="section2">2. transGcode</h3>
                 <p>
@@ -124,7 +124,7 @@
                     algorithms that ensure smooth and efficient printing operations.
                 </p>
 
-                <!-- GitHub Gist 嵌入 - transGcode.py -->
+                <!-- GitHub Gist embed - transGcode.py -->
                 <h4>Implementation Code:</h4>
                 <div class="gist-container">
                     <script src="https://gist.github.com/xsj57/69829c86f61673e09fc2e2984ae83264.js"></script>
@@ -132,14 +132,14 @@
             </div>
         </div>
 
-        <!-- 页脚 -->
+        <!-- Footer -->
         <footer>
             <p class="copyright">© 2025 Eric Xu. Created in Fuzhou.</p>
         </footer>
 
     </div>
 
-    <!-- 引入 JavaScript 文件 -->
+    <!-- Include JavaScript file -->
     <script src="js/main.js"></script>
 </body>
 
