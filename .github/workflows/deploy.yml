@@ -1,62 +1,89 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Pages (GitHub Pages Action)
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
+
+# GitHub Pages 官方 Action 所需权限
+permissions:
+  contents: read # 读取仓库内容
+  pages: write # 发布 Pages
+  id-token: write # OIDC 用于认证（安全发布）
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
-    
+    concurrency: pages-build
+
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '18'
-        
-    - name: Install dependencies
-      run: |
-        npm install -g html-validate
-        npm install -g css-validator
-        
-    - name: Validate HTML
-      run: |
-        html-validate index.html diw_code.html
-        
-    - name: Validate CSS
-      run: |
-        css-validator stylesheet.css
-        
-    - name: Check file structure
-      run: |
-        echo "Checking required files..."
-        test -f index.html && echo "✓ index.html exists"
-        test -f stylesheet.css && echo "✓ stylesheet.css exists"
-        test -f js/main.js && echo "✓ js/main.js exists"
-        test -f CNAME && echo "✓ CNAME exists"
-        test -f README.md && echo "✓ README.md exists"
-        
-    - name: Deploy to GitHub Pages
-      if: github.ref == 'refs/heads/main'
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
-        cname: www.xsj57.us.kg
-        
-    - name: Comment PR
-      if: github.event_name == 'pull_request'
-      uses: actions/github-script@v7
-      with:
-        script: |
-          github.rest.issues.createComment({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            body: '🚀 Deployment check completed! If all checks pass, your changes will be deployed to GitHub Pages.'
-          }) 
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # 需要完整提交历史以检测分支
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: |
+          npm install -g html-validate
+          npm install -g css-validator
+
+      - name: Validate HTML
+        run: |
+          html-validate index.html diw_code.html
+
+      - name: Validate CSS
+        run: |
+          css-validator stylesheet.css
+
+      - name: Check file structure
+        run: |
+          echo "Checking required files..."
+          test -f index.html && echo "✓ index.html exists"
+          test -f stylesheet.css && echo "✓ stylesheet.css exists"
+          test -f js/main.js && echo "✓ js/main.js exists"
+          test -f CNAME && echo "✓ CNAME exists"
+          test -f README.md && echo "✓ README.md exists"
+
+      # 构建阶段如需额外打包，可在此添加步骤；当前直接发布根目录静态资源
+      - name: Prepare publish directory
+        run: |
+          echo "Using repository root as publish directory"
+
+      - name: Upload artifact to Pages
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    concurrency: pages-deploy
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  comment-pr:
+    if: github.event_name == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '✅ 构建与 Pages artifact 已完成（方案2：官方 Pages Action）。合并后将自动发布。'
+            })
