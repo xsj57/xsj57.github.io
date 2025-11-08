@@ -161,6 +161,26 @@ a[href^="mailto:"] .italic-text {
     box-sizing: border-box;
 }
 
+/* === 通用表格与单元格工具类 === */
+.table-wrapper {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: separate;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.table-wrapper-spaced {
+    border-spacing: 0 10px;
+}
+
+.cell {
+    padding: 16px;
+    width: 100%;
+    vertical-align: middle;
+}
+
 /* === 个人资料样式 === */
 .profile-row>td {
     vertical-align: middle;
@@ -171,7 +191,26 @@ a[href^="mailto:"] .italic-text {
     top: -15px;
 }
 
+/* 左侧头像列尺寸与布局 */
+.profile-avatar-column {
+    padding: 2.5%;
+    width: 37%;
+    max-width: 37%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+/* 右侧文字列尺寸与内边距 */
+.profile-text-column {
+    padding: 2.5%;
+    width: 63%;
+}
+
 .profile-links {
+    text-align: center;
+}
+
+.text-center {
     text-align: center;
 }
 
@@ -342,6 +381,32 @@ body {
     transform: scale(1.05);
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
+
+/* 图片边框与占满容器 */
+.img-bordered {
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+/* 页面标题与副标题 */
+.page-title {
+    font-size: 42px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.page-subtitle {
+    text-align: center;
+    font-size: 24px;
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* 工具类 */
+.mb-30 { margin-bottom: 30px; }
+.fs-16 { font-size: 16px; }
+.w-25 { width: 25%; }
+.w-75 { width: 75%; }
 
 /* === 项目详情内容 === */
 .project-content {
@@ -774,6 +839,11 @@ html.dark-mode .project-content h2 {
     /* 保持白色主标题文字 */
     border-bottom-color: #a855f7;
     /* 紫色下边框线 */
+}
+
+/* 深色模式：副标题颜色微调 */
+html.dark-mode .page-subtitle {
+    color: #bdbdbd;
 }
 
 /* 其他级别标题保持协调的颜色层次 */

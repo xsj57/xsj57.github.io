@@ -22,7 +22,7 @@
 
 <body>
     <!-- Theme toggle button -->
-    <button id="theme-toggle" title="Toggle dark/light mode">
+    <button id="theme-toggle" type="button" aria-label="Toggle dark or light mode" title="Toggle dark/light mode">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
@@ -42,7 +42,7 @@
     </button>
 
     <!-- Back to top button -->
-    <button id="back-to-top" title="Back to top">
+    <button id="back-to-top" type="button" aria-label="Back to top" title="Back to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="19" x2="12" y2="5"></line>
@@ -57,18 +57,17 @@
     <div class="page-container">
 
         <!-- Back to home link -->
-        <div style="margin-bottom: 30px;">
-            <a href="index.html" style="font-size: 16px;">← Back to Home</a>
+        <div class="mb-30">
+            <a href="index.html" class="fs-16" aria-label="Back to home page">← Back to Home</a>
         </div>
 
         <!-- Project title -->
-        <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="table-wrapper">
             <tbody>
                 <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
-                        <h1 style="font-size: 42px; margin-bottom: 10px; text-align: center;">Project Details</h1>
-                        <p style="text-align: center; font-size: 24px; color: #666; margin-bottom: 40px;">G-code project
+                    <td class="cell">
+                        <h1 class="page-title">Project Details</h1>
+                        <p class="page-subtitle">G-code project
                             for DIW printer</p>
                     </td>
                 </tr>

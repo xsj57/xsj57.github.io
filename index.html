@@ -7,18 +7,15 @@
     <meta name="author" content="Shijie Xu">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
     <!-- 网页图标（Favicon） -->
     <link rel="icon" type="image/png" sizes="32x32" href="media/icon/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="16x16" href="media/icon/favicon-96x96.png">
     <link rel="shortcut icon" href="media/icon/favicon.ico">
-    
     <!-- Apple设备图标 -->
     <link rel="apple-touch-icon" sizes="180x180" href="media/icon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="152x152" href="media/icon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="144x144" href="media/icon/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="120x120" href="media/icon/apple-touch-icon.png">
-    
     <!-- Android设备图标 -->
     <link rel="icon" type="image/png" sizes="192x192" href="media/icon/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="media/icon/android-chrome-512x512.png">
@@ -42,7 +39,7 @@
 
 <body>
     <!-- 主题切换按钮 -->
-    <button id="theme-toggle" title="Toggle dark/light mode">
+    <button id="theme-toggle" type="button" aria-label="Toggle dark or light mode" title="Toggle dark/light mode">
         <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <circle cx="12" cy="12" r="5"></circle>
@@ -62,7 +59,7 @@
     </button>
 
     <!-- 返回顶部按钮 -->
-    <button id="back-to-top" title="Back to top">
+    <button id="back-to-top" type="button" aria-label="Back to top" title="Back to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <line x1="12" y1="19" x2="12" y2="5"></line>
@@ -77,13 +74,11 @@
     <div class="page-container">
 
         <!-- 顶部: 个人信息 -->
-        <table
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <table class="table-wrapper">
             <tbody>
-                <tr class="profile-row" style="padding:0px">
+        <tr class="profile-row">
                     <!-- 左栏: 头像和社交图标 -->
-                    <td class="profile-avatar-column"
-                        style="padding:2.5%;width:37%;max-width:37%;vertical-align: middle;text-align:center;">
+                    <td class="profile-avatar-column">
                         <div class="avatar-container">
                             <!-- 核心改动：移除了内联style，换成了class -->
                             <img class="profile-avatar-image" alt="profile photo" src="media/avatar.jpg">
@@ -100,9 +95,9 @@
                         </div>
                     </td>
                     <!-- 右栏: 个人简介和链接 -->
-                    <td class="profile-text-column" style="padding:2.5%;width:63%;">
+                    <td class="profile-text-column">
                         <!-- 修改姓名部分支持打字机效果 -->
-                        <p class="name" style="text-align: center;">
+                        <p class="name text-center">
                             <span id="typewriter-name"></span>
                             <span class="typewriter-cursor">|</span>
                         </p>
@@ -118,7 +113,7 @@
                             <a href="#"><span class="bold-text">3D Printer</span></a>, and
                             <a href="#"><span class="bold-text">AI-assisted 3D Printing</span></a>.
                         </p>
-                        <p style="text-align:center" class="profile-links">
+                        <p class="profile-links">
                             <a href="mailto:jiexus0507@gmail.com"><span class="italic-text">Email</span></a>&nbsp;/&nbsp;
                             <a href="data/cv.pdf">CV</a> &nbsp;/&nbsp;
                             <a href="your_google_scholar_link">Google Scholar</a> &nbsp;/&nbsp;
@@ -130,21 +125,19 @@
         </table>
 
         <!-- 教育经历 -->
-        <table class="section-to-animate"
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="section-to-animate table-wrapper">
             <tbody>
                 <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
+                    <td class="cell">
                         <h2>Education</h2>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <table
-            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="table-wrapper table-wrapper-spaced">
             <tbody>
                 <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
+                    <td class="cell">
                         <span class="papertitle">Fujian Agriculture and Forestry University</span><br>
                         MEng in Forestry Engineering<br>
                         <span class="italic-text">Sep 2023 - Present</span>
@@ -152,7 +145,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
+                    <td class="cell">
                         <span class="papertitle">Changzhou Institute of Technology</span><br>
                         B.S. in Civil Engineering<br>
                         <span class="italic-text">Sep 2018 - Jun 2022</span>
@@ -163,24 +156,22 @@
         </table>
                 
         <!-- 研究 -->
-        <table class="section-to-animate"
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="section-to-animate table-wrapper">
             <tbody>
                 <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
+                    <td class="cell">
                         <h2>Research</h2>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <table
-            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="table-wrapper table-wrapper-spaced">
             <tbody>
                 <tr class="highlight-row">
-                    <td style="padding:16px;width:25%;vertical-align:middle">
-                        <img src="media/research/1.jpg" alt="project image" style="width:100%; border:1px solid #ddd;">
+                    <td class="cell w-25">
+                        <img src="media/research/1.jpg" alt="project image" class="img-bordered">
                     </td>
-                    <td style="padding:16px;width:75%;vertical-align:middle">
+                    <td class="cell w-75">
                         <a href="https://github.com/xsj57/"><span class="papertitle">Vegetable Oil-based DIW 3D Printing</span></a><br>
                         <strong>Shijie Xu</strong>, Li Ying<br>
                         <em>Hope is nature, <span class="italic-text">2025</span></em><br>
@@ -192,25 +183,22 @@
         </table>
 
         <!-- 项目 -->
-        <table class="section-to-animate"
-            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="section-to-animate table-wrapper">
             <tbody>
                 <tr>
-                    <td style="padding:16px;width:100%;vertical-align:middle">
+                    <td class="cell">
                         <h2>Projects</h2>
                     </td>
                 </tr>
             </tbody>
         </table>
-        <table
-            style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <table class="table-wrapper table-wrapper-spaced">
             <tbody>
                 <tr class="projects-row">
-                    <td style="padding:16px;width:25%;vertical-align:middle">
-                        <img src="media/project/diw.png" alt="project image" class="project-thumbnail"
-                            style="width:100%; border:1px solid #ddd;" onclick="window.location.href='diw_code.html'">
+                    <td class="cell w-25">
+                        <img src="media/project/diw.png" alt="project image" class="project-thumbnail img-bordered" onclick="window.location.href='diw_code.html'">
                     </td>
-                    <td style="padding:16px;width:75%;vertical-align:middle">
+                    <td class="cell w-75">
                         <a href="diw_code.html"><span class="papertitle">G-code project for DIW printer</span></a><br>
                         <strong>Shijie Xu</strong><br>
                         <em><strong>Python</strong>, Code writing, <span class="italic-text">2025 - Present</span></em><br>
