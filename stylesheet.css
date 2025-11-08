@@ -265,7 +265,6 @@ body {
     height: 15px;
     border: 5px solid #5fb7da;
     border-radius: 50%;
-    pointer-events: none;
     transform: translate(-50%, -50%);
     z-index: 9999;
     transition: border-color 0.3s ease, width 0.2s ease, height 0.2s ease, opacity 0.2s ease;
@@ -293,8 +292,9 @@ body {
 #theme-toggle svg {
     width: 24px;
     height: 24px;
-    stroke: #555;
-    transition: stroke 0.3s ease;
+    /* 使用父元素的 currentColor 机制控制 SVG 线条颜色 */
+    color: #555;
+    transition: color 0.3s ease;
 }
 
 .moon-icon {
@@ -336,7 +336,7 @@ body {
 #back-to-top svg {
     width: 24px;
     height: 24px;
-    stroke: white;
+    color: white;
 }
 
 /* === 动画效果 === */
@@ -536,7 +536,6 @@ body {
 /* 行号样式 */
 .responsive-code-container .line-numbers .line-numbers-rows {
     position: absolute;
-    pointer-events: none;
     top: 20px;
     left: 0;
     width: 50px !important;
@@ -808,7 +807,7 @@ html.dark-mode #theme-toggle .moon-icon {
 }
 
 html.dark-mode #theme-toggle svg {
-    stroke: #e6e6e6;
+    color: #e6e6e6;
 }
 
 /* 返回顶部按钮 */

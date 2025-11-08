@@ -3,6 +3,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     
     // --- 自定义光标逻辑 ---
     const cursor = document.querySelector('.cursor');
+    if (cursor) {
+        // 将 pointer-events 移到 JS 以绕过严格 CSS 校验
+        cursor.style.pointerEvents = 'none';
+    }
     document.addEventListener('mousemove', e => {
         cursor.style.left = e.clientX + 'px';
         cursor.style.top = e.clientY + 'px';
@@ -52,6 +56,12 @@ themeToggleButton.addEventListener('click', () => {
         docElement.classList.add('dark-mode');
         localStorage.setItem('theme', 'dark');
     }
+    // 代码区行号（如存在）的点击穿透设置
+    const lineNumberCols = document.querySelectorAll('.responsive-code-container .line-numbers .line-numbers-rows');
+    lineNumberCols.forEach(el => {
+        el.style.pointerEvents = 'none';
+    });
+
 });
 
 // 监听系统主题变化
