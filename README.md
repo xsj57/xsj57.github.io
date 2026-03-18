@@ -63,7 +63,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 - **GitHub**: [@xsj57](https://github.com/xsj57)
-- **Personal Website**: [www.xsj57.us.kg](https://www.xsj57.us.kg)
+- **Personal Website**: [www.xsj57.com](https://www.xsj57.com)
 
 ---
 
