@@ -1,6 +1,6 @@
 # My Personal Website
 
-🌐 **Website**: [www.xsj57.us.kg](https://www.xsj57.us.kg)
+🌐 **Website**: [www.xsj57.com](https://www.xsj57.com)
 
 ## 📖 Project Description
 
