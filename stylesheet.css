@@ -373,7 +373,9 @@ body {
 
 /* === 项目缩略图 === */
 .project-thumbnail {
+    aspect-ratio: 4 / 3;
     cursor: pointer;
+    object-fit: cover;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -446,6 +448,11 @@ body {
     margin-bottom: 18px;
     max-width: 100%;
     overflow-wrap: break-word;
+}
+
+.project-hero-image {
+    max-height: 560px;
+    object-fit: contain;
 }
 
 /* === 目录样式 === */

@@ -1,0 +1,130 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>SMmaster - Shijie Xu</title>
+    <meta name="author" content="徐世杰 Shijie Xu">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    <link rel="icon" type="image/png" href="media/favicon.png">
+
+    <script>
+        (function () {
+            const theme = localStorage.getItem('theme');
+            if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                document.documentElement.classList.add('dark-mode');
+            }
+        })();
+    </script>
+</head>
+
+<body>
+    <button id="theme-toggle" type="button" aria-label="Toggle dark or light mode" title="Toggle dark/light mode">
+        <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+        <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+        </svg>
+    </button>
+
+    <button id="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="19" x2="12" y2="5"></line>
+            <polyline points="5,12 12,5 19,12"></polyline>
+        </svg>
+    </button>
+
+    <div class="cursor"></div>
+
+    <div class="page-container">
+        <div class="mb-30">
+            <a href="index.html" class="fs-16" aria-label="Back to home page">← Back to Home</a>
+        </div>
+
+        <table class="table-wrapper">
+            <tbody>
+                <tr>
+                    <td class="cell">
+                        <h1 class="page-title">SMmaster</h1>
+                        <p class="page-subtitle">Shopping Manage Master for iOS</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="project-wrapper">
+            <div class="project-content">
+                <img src="media/project/smmaster.png" alt="SMmaster app interface" class="img-bordered project-hero-image">
+                <p>
+                    SMmaster is a native SwiftUI shopping management app for iPhone. It combines a shopping list,
+                    purchase history, exchange calculator, and spending statistics into a local-first mobile tool.
+                </p>
+                <p>
+                    <a href="https://github.com/xsj57/SMmaster" target="_blank" rel="noopener">View on GitHub</a>
+                </p>
+            </div>
+
+            <div class="project-content">
+                <h2>Table of Contents</h2>
+                <div class="table-of-contents">
+                    <ul>
+                        <li><a href="#section1">1. Overview</a></li>
+                        <li><a href="#section2">2. Features</a></li>
+                        <li><a href="#section3">3. Technical Notes</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-content">
+                <h3 id="section1">1. Overview</h3>
+                <p>
+                    The app was built to make shopping decisions easier when comparing USD and RMB prices. It keeps
+                    item planning, purchase records, exchange conversion, and store-level spending review in one place.
+                </p>
+            </div>
+
+            <div class="project-content">
+                <h3 id="section2">2. Features</h3>
+                <p>
+                    The shopping list supports adding, editing, deleting, budgeting, currency switching, and one-click
+                    purchase actions that move items into history. The history view records purchase details and
+                    supports store and date filtering.
+                </p>
+                <p>
+                    The app also includes batch USD/CNY conversion, spending summaries, store breakdowns, trend charts,
+                    local data persistence, JSON import/export, and customizable store lists.
+                </p>
+            </div>
+
+            <div class="project-content">
+                <h3 id="section3">3. Technical Notes</h3>
+                <p>
+                    SMmaster is written in Swift with SwiftUI and organized around local data models, a data store,
+                    and dedicated views for shopping, history, exchange calculation, statistics, and settings. The
+                    project uses XcodeGen for project generation and can be packaged as an unsigned IPA.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <p class="copyright">© 2025 Eric Xu. Created in Fuzhou.</p>
+        </footer>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
