@@ -21,7 +21,7 @@ This is my personal academic website.
 - **Styling**: Custom CSS with responsive layout
 - **Icons**: SVG icons with multi-device favicon support
 - **Deployment**: GitHub Pages
-- **Domain**: Custom domain www.xsj57.us.kg
+- **Domain**: Custom domain www.xsj57.com
 
 ## 📁 Project Structure
 
